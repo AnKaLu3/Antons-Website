@@ -26,7 +26,7 @@ if ('IntersectionObserver' in window && sectionLinks.length) {
 }
 // Compatibility with the original portfolio's query-string project URLs.
 const requestedPage = new URLSearchParams(location.search).get('page');
-const legacyPages = { home: 'index.html', experience: 'experience.html', 'robotic-skin': 'robotic-skin.html', 'furhat-audio': 'furhat-audio.html', furpack: 'furpack.html', 'furhat-360': 'furhat-360.html', cobot: 'cobot.html', 'harvesting-robot': 'harvesting-robot.html' };
+const legacyPages = { home: 'index.html', experience: 'experience.html', 'robotic-skin': 'robotic-skin.html', 'furhat-audio': 'furhat-audio.html', furpack: 'furpack.html', 'furhat-360': 'furhat-360.html', cobot: 'cobot.html', 'rag-chatbot': 'rag-chatbot.html', 'harvesting-robot': 'harvesting-robot.html' };
 if (requestedPage && Object.prototype.hasOwnProperty.call(legacyPages, requestedPage)) {
   location.replace(legacyPages[requestedPage] + location.hash);
 }
