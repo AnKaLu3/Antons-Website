@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://ankalu3.github.io/Antons-Website/sitemap.xml
+Sitemap: https://antonkuehr.github.io/akrobotics/sitemap.xml
