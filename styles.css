@@ -24,10 +24,15 @@
 .media-embed iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .gallery .media-figure figcaption{margin-top:12px}
 .org-mark{overflow:hidden;padding:0;background:transparent;border:0}
-.org-mark img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+.org-mark img{width:100%;height:100%;object-fit:contain;transform:scale(1.04);mix-blend-mode:multiply}
+.org-mark--th img,.org-mark--perfect-id img,.org-mark--taktsoft img{transform:scale(.82)}
+.org-mark--tudelft img{transform:scale(.94)}
 .education-heading{display:flex;align-items:center;gap:16px;margin-bottom:12px}
 .education-heading .org-mark{flex:none}
 .education-heading .date{margin-bottom:4px}
+.role-group{display:grid;gap:22px}
+.role-group .role-subentry+.role-subentry{padding-top:22px;border-top:1px solid var(--line)}
+.experience-more{margin-top:28px;text-align:right}
 .volunteer-preview{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:30px}
 .volunteer-preview article{padding:22px;border:1px solid var(--line);border-radius:4px;background:rgba(15,49,112,.84)}
 .volunteer-preview h3{font-size:1.08rem;margin:8px 0}
