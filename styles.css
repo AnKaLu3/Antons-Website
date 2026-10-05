@@ -99,3 +99,24 @@
 
 /* Keep transformed project artwork centered consistently across WebKit and Blink. */
 .project-image>img{transform-origin:center center;-webkit-transform-origin:center center}
+
+/* Explicit WebKit fallbacks for project cards. */
+.project-image.skin-card,
+.project-image.harvest-card{background-color:#fff!important}
+.project-image.skin-card>img{transform:scale(.78);-webkit-transform:scale(.78)}
+.project-image>img.harvest-card-image{transform:translateY(-18px) scale(1.18);-webkit-transform:translateY(-18px) scale(1.18)}
+
+.expandable-list{margin-top:28px;border-top:1px solid var(--line)}
+.expandable-list summary{display:flex;justify-content:flex-end;gap:12px;padding-top:18px;color:var(--accent);cursor:pointer;font-size:.91rem;font-weight:500;list-style:none}
+.expandable-list summary::-webkit-details-marker{display:none}
+.expandable-list summary span{font-size:1.1rem;line-height:1}
+.expandable-list[open] summary span{transform:rotate(45deg)}
+.expandable-content{margin-top:24px}
+.expandable-content.role-list{gap:20px}
+.community-expand{margin-top:30px}
+@media(max-width:580px){.expandable-list summary{justify-content:flex-start}}
+
+/* Give the language list a stronger visual presence after the section reorder. */
+.language-row{margin-top:52px;padding:28px 0;gap:24px 40px}
+.language-row p{font-size:.95rem}
+.language-row span{font-size:.74rem}
