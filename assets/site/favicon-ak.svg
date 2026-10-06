@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AK favicon">
-  <rect width="64" height="64" rx="14" fill="#ffffff"/>
-  <g transform="translate(-2.75 .25)">
-    <path d="M8 47.5 21.2 16h6.1l13.2 31.5h-7.2l-2.7-6.9H17.8l-2.7 6.9H8Zm12.2-13h8l-4-10.3-4 10.3Z" fill="#0c3027"/>
-    <path d="M37.8 16h6.4v13.2L53.7 16H61L49.8 31.2 61.5 47.5h-7.8L44.2 34v13.5h-6.4V16Z" fill="#4f9275"/>
-  </g>
-</svg>
