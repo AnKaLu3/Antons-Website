@@ -1,20 +1,306 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>360° Furhat — Anton Kühr</title><meta name="description" content="Adding full-body rotational freedom to a social robot."><meta name="author" content="Anton Kühr"><meta name="theme-color" content="#0a2352">
-<meta property="og:type" content="website"><meta property="og:site_name" content="Anton Kühr"><meta property="og:title" content="360° Furhat — Anton Kühr"><meta property="og:description" content="Adding full-body rotational freedom to a social robot."><meta name="twitter:card" content="summary">
-<link rel="icon" href="assets/site/favicon-ak.svg" type="image/svg+xml"><link rel="shortcut icon" href="assets/site/favicon-ak.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"><script src="site.js" defer></script>
-</head>
-<body class="furhat-360-page"><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="container header-inner"><a class="wordmark" href="index.html" aria-label="Anton Kühr home"><img src="assets/site/favicon-ak.svg" alt="" width="44" height="44"></a><button class="menu-button" aria-expanded="false" aria-controls="site-nav" type="button">Menu <span aria-hidden="true">＋</span></button><nav id="site-nav" aria-label="Main navigation"><a href="index.html#projects">← All projects</a><a href="index.html#about">About me</a><a href="index.html#contact">Contact</a><a class="nav-cv" href="assets/site/certificates/cv-portfolio.pdf" target="_blank" rel="noopener">CV ↗</a></nav></div></header>
-<main id="main"><section class="project-hero"><div class="container narrow"><a class="back-link" href="index.html#projects">← Selected work</a><p class="eyebrow">Furhat Robotics · Prototyping &amp; Concepting · Jun–Jul 2025</p><h1>360° Furhat</h1><p class="project-lead">Adding full-body rotational freedom to a social robot.</p><p class="project-lead">As part of Furhat Robotics’ Prototyping &amp; Concepting team, I worked on a prototype that added a rotational degree of freedom to the Furhat robot. The goal was to allow the entire robot to turn toward people around it, extending Furhat’s existing head and facial movements into full 360° interactions.</p></div></section>
-<section class="project-body"><div class="container narrow">
-<div class="case-study-section"><div class="case-study-copy"><p class="eyebrow">01 / Concept development</p><h2>Exploring how the whole robot could turn.</h2><p>Several mechanical architectures were explored, including friction-wheel, geared and belt-driven solutions. The concepts were evaluated for integration into the existing Furhat structure, available packaging space, reliability and their ability to rotate the entire upper assembly.</p></div><figure><div class="gallery-image wide"><img src="assets/projects/furhat-360/new/concept-development.png" alt="Initial mechanical concepts for rotating the Furhat robot base" loading="lazy"></div><figcaption>Initial concepts — exploring different approaches for rotating the complete robot base.</figcaption></figure></div>
-<div class="case-study-section"><div class="case-study-copy"><p class="eyebrow">02 / Early prototyping</p><h2>Testing the principle inside the housing.</h2><p>Promising concepts were quickly prototyped and tested in the robot. These experiments helped expose practical constraints such as available space, structural support, bearing placement and how the drive system could be integrated without redesigning the complete platform.</p></div><figure><div class="gallery-image wide"><img src="assets/projects/furhat-360/new/early-prototype.png" alt="Early rotation prototypes tested inside the Furhat housing" loading="lazy"></div><figcaption>Early prototypes — testing rotation principles directly inside the Furhat housing.</figcaption></figure></div>
-<div class="case-study-section"><div class="case-study-copy"><p class="eyebrow">03 / Final mechanical concept</p><h2>A compact belt-driven mechanism.</h2><p>The final prototype used a belt-driven mechanism centred on the robot’s rotational axis. A dedicated servo drives the central pulley through a timing belt, while a bearing and custom structural components support the rotating assembly. The mechanism was designed around the existing Furhat housing to minimise modifications to the original platform.</p></div><div class="image-pair"><figure><div class="gallery-image"><img src="assets/projects/furhat-360/new/final-assembled.png" alt="Assembled CAD design of the Furhat rotation mechanism" loading="lazy"></div><figcaption>Integrated CAD design — servo, belt drive, bearing and support structure packaged inside the existing base.</figcaption></figure><figure><div class="gallery-image"><img src="assets/projects/furhat-360/new/final-exploded.png" alt="Exploded view of the Furhat rotation mechanism" loading="lazy"></div><figcaption>Exploded view of the additional rotation mechanism.</figcaption></figure></div></div>
-<div class="case-study-section"><div class="case-study-copy"><p class="eyebrow">04 / Built prototype</p><h2>From CAD to a working mechanism.</h2><p>The design was manufactured and assembled into a working prototype. The added actuator and transmission fit within the robot base while preserving the existing neck mechanism and electronics, turning the mechanical concept into a functional fourth degree of freedom.</p></div><figure><div class="gallery-image wide"><img src="assets/projects/furhat-360/new/built-prototype.png" alt="Built Furhat rotation prototype with detail views" loading="lazy"></div><figcaption>Final prototype — the belt-driven rotation mechanism installed inside Furhat.</figcaption></figure></div>
-<div class="case-study-section"><div class="case-study-copy"><p class="eyebrow">05 / Tracking and control</p><h2>Turning perception into body motion.</h2><p>The mechanical system was connected to a person-tracking control loop. After initialisation, the software receives camera input, converts the detected 3D position of a person into a yaw angle and uses a PID controller to command the rotation servo. When tracking ends, the robot can return to its original orientation.</p></div><figure><div class="gallery-image wide"><img src="assets/projects/furhat-360/new/control-architecture.png" alt="Control architecture from camera position to servo motion" loading="lazy"></div><figcaption>Control architecture — camera position is converted into a yaw target and translated into servo motion using PID control.</figcaption></figure></div>
-<div class="case-study-section"><div class="case-study-copy"><p class="eyebrow">06 / Working demonstration</p><h2>Following people around the robot.</h2><p>In the final demonstrator, Furhat could follow a person moving around its field of view by rotating its entire body rather than relying only on eye and head movement. This extended the robot’s physical attention beyond its original forward-facing workspace.</p></div><figure><div class="image-strip"><img src="assets/projects/furhat-360/new/tracking-01.png" alt="Person tracking demonstration, position one" loading="lazy"><img src="assets/projects/furhat-360/new/tracking-02.png" alt="Person tracking demonstration, position two" loading="lazy"><img src="assets/projects/furhat-360/new/tracking-03.png" alt="Person tracking demonstration, position three" loading="lazy"></div><figcaption>Person tracking in action — the detected position is translated into coordinated body rotation as the user moves around the robot.</figcaption></figure></div>
-<div class="outcome"><p class="eyebrow">Outcome</p><p>The prototype achieved full-body person tracking within the existing Furhat architecture. The main challenges identified for a future iteration were cable routing, base stability, airflow, service access and smoother motion trajectories.</p><ul class="tags" aria-label="Skills"><li>Mechanical prototyping</li><li>CAD</li><li>Belt drives</li><li>Dynamixel</li><li>Python</li><li>PID control</li><li>Computer vision</li><li>Rapid prototyping</li></ul></div>
-<nav class="project-pagination" aria-label="Other projects"><a href="furpack.html"><span>← Previous project</span>Furpack — a backpack for Furhat</a><a href="cobot.html"><span>Next project →</span>Voice-Controlled Cobot System</a></nav></div></section></main>
-<footer><div class="container footer-inner"><span>© 2026 Anton Kühr</span><a href="https://www.linkedin.com/in/anton-kuehr/" target="_blank" rel="noopener">LinkedIn ↗</a></div></footer></body></html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>360° Furhat — Anton Kühr</title>
+    <meta
+      name="description"
+      content="Adding full-body rotational freedom to a social robot."
+    />
+    <meta name="author" content="Anton Kühr" />
+    <meta name="theme-color" content="#071c17" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Anton Kühr" />
+    <meta property="og:title" content="360° Furhat — Anton Kühr" />
+    <meta
+      property="og:description"
+      content="Adding full-body rotational freedom to a social robot."
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="assets/site/favicon-ak.svg" type="image/svg+xml" />
+    <link
+      rel="shortcut icon"
+      href="assets/site/favicon-ak.svg"
+      type="image/svg+xml"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="site.js" defer></script>
+  </head>
+  <body class="furhat-360-page">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="wordmark" href="index.html" aria-label="Anton Kühr home"
+          >Anton Kühr</a
+        ><button
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          type="button"
+        >
+          Menu <span aria-hidden="true">＋</span>
+        </button>
+        <nav id="site-nav" aria-label="Main navigation">
+          <a href="index.html#projects">← All projects</a
+          ><a href="index.html#about">About me</a
+          ><a href="index.html#contact">Contact</a
+          ><a
+            class="nav-social"
+            href="https://www.linkedin.com/in/anton-kuehr/"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn ↗</a
+          >
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <section class="project-hero">
+        <div class="container narrow">
+          <a class="back-link" href="index.html#projects">← Selected work</a>
+          <p class="eyebrow">
+            06/2025 - 07/2025 Team Prototyping &amp; Concepting at Furhat
+            Robotics
+          </p>
+          <h1>360° Furhat</h1>
+          <p class="project-lead">
+            Adding full-body rotational freedom to a social robot.
+          </p>
+          <p class="project-lead">
+            As part of Furhat Robotics’ Prototyping &amp; Concepting team, I
+            worked on a prototype that added a rotational degree of freedom to
+            the Furhat robot. The goal was to allow the entire robot to turn
+            toward people around it, extending Furhat’s existing head and facial
+            movements into full 360° interactions.
+          </p>
+        </div>
+      </section>
+      <section class="project-body">
+        <div class="container narrow">
+          <div class="case-study-section">
+            <div class="case-study-copy">
+              <p class="eyebrow">01 / Concept development</p>
+              <h2>Exploring how the whole robot could turn.</h2>
+              <p>
+                Several mechanical architectures were explored, including
+                friction-wheel, geared and belt-driven solutions. The concepts
+                were evaluated for integration into the existing Furhat
+                structure, available packaging space, reliability and their
+                ability to rotate the entire upper assembly.
+              </p>
+            </div>
+            <figure>
+              <div class="gallery-image wide">
+                <img
+                  src="assets/projects/furhat-360/new/concept-development.png"
+                  alt="Initial mechanical concepts for rotating the Furhat robot base"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                Initial concepts — exploring different approaches for rotating
+                the complete robot base.
+              </figcaption>
+            </figure>
+          </div>
+          <div class="case-study-section">
+            <div class="case-study-copy">
+              <p class="eyebrow">02 / Early prototyping</p>
+              <h2>Testing the principle inside the housing.</h2>
+              <p>
+                Promising concepts were quickly prototyped and tested in the
+                robot. These experiments helped expose practical constraints
+                such as available space, structural support, bearing placement
+                and how the drive system could be integrated without redesigning
+                the complete platform.
+              </p>
+            </div>
+            <figure>
+              <div class="gallery-image wide">
+                <img
+                  src="assets/projects/furhat-360/new/early-prototype.png"
+                  alt="Early rotation prototypes tested inside the Furhat housing"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                Early prototypes — testing rotation principles directly inside
+                the Furhat housing.
+              </figcaption>
+            </figure>
+          </div>
+          <div class="case-study-section">
+            <div class="case-study-copy">
+              <p class="eyebrow">03 / Final mechanical concept</p>
+              <h2>A compact belt-driven mechanism.</h2>
+              <p>
+                The final prototype used a belt-driven mechanism centred on the
+                robot’s rotational axis. A dedicated servo drives the central
+                pulley through a timing belt, while a bearing and custom
+                structural components support the rotating assembly. The
+                mechanism was designed around the existing Furhat housing to
+                minimise modifications to the original platform.
+              </p>
+            </div>
+            <div class="image-pair">
+              <figure>
+                <div class="gallery-image">
+                  <img
+                    src="assets/projects/furhat-360/new/final-assembled.png"
+                    alt="Assembled CAD design of the Furhat rotation mechanism"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption>
+                  Integrated CAD design — servo, belt drive, bearing and support
+                  structure packaged inside the existing base.
+                </figcaption>
+              </figure>
+              <figure>
+                <div class="gallery-image">
+                  <img
+                    src="assets/projects/furhat-360/new/final-exploded.png"
+                    alt="Exploded view of the Furhat rotation mechanism"
+                    loading="lazy"
+                  />
+                </div>
+                <figcaption>
+                  Exploded view of the additional rotation mechanism.
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="case-study-section">
+            <div class="case-study-copy">
+              <p class="eyebrow">04 / Built prototype</p>
+              <h2>From CAD to a working mechanism.</h2>
+              <p>
+                The design was manufactured and assembled into a working
+                prototype. The added actuator and transmission fit within the
+                robot base while preserving the existing neck mechanism and
+                electronics, turning the mechanical concept into a functional
+                fourth degree of freedom.
+              </p>
+            </div>
+            <figure>
+              <div class="gallery-image wide">
+                <img
+                  src="assets/projects/furhat-360/new/built-prototype.png"
+                  alt="Built Furhat rotation prototype with detail views"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                Final prototype — the belt-driven rotation mechanism installed
+                inside Furhat.
+              </figcaption>
+            </figure>
+          </div>
+          <div class="case-study-section">
+            <div class="case-study-copy">
+              <p class="eyebrow">05 / Tracking and control</p>
+              <h2>Turning perception into body motion.</h2>
+              <p>
+                The mechanical system was connected to a person-tracking control
+                loop. After initialisation, the software receives camera input,
+                converts the detected 3D position of a person into a yaw angle
+                and uses a PID controller to command the rotation servo. When
+                tracking ends, the robot can return to its original orientation.
+              </p>
+            </div>
+            <figure>
+              <div class="gallery-image wide">
+                <img
+                  src="assets/projects/furhat-360/new/control-architecture.png"
+                  alt="Control architecture from camera position to servo motion"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                Control architecture — camera position is converted into a yaw
+                target and translated into servo motion using PID control.
+              </figcaption>
+            </figure>
+          </div>
+          <div class="case-study-section">
+            <div class="case-study-copy">
+              <p class="eyebrow">06 / Working demonstration</p>
+              <h2>Following people around the robot.</h2>
+              <p>
+                In the final demonstrator, Furhat could follow a person moving
+                around its field of view by rotating its entire body rather than
+                relying only on eye and head movement. This extended the robot’s
+                physical attention beyond its original forward-facing workspace.
+              </p>
+            </div>
+            <figure>
+              <div class="image-strip">
+                <img
+                  src="assets/projects/furhat-360/new/tracking-03.png"
+                  alt="Person tracking demonstration, position one"
+                  loading="lazy"
+                /><img
+                  src="assets/projects/furhat-360/new/tracking-02.png"
+                  alt="Person tracking demonstration, position two"
+                  loading="lazy"
+                /><img
+                  src="assets/projects/furhat-360/new/tracking-01.png"
+                  alt="Person tracking demonstration, position three"
+                  loading="lazy"
+                />
+              </div>
+              <figcaption>
+                Person tracking in action — the detected position is translated
+                into coordinated body rotation as the user moves around the
+                robot.
+              </figcaption>
+            </figure>
+          </div>
+          <div class="outcome">
+            <p class="eyebrow">Outcome</p>
+            <p>
+              The prototype achieved full-body person tracking within the
+              existing Furhat architecture. The main challenges identified for a
+              future iteration were cable routing, base stability, airflow,
+              service access and smoother motion trajectories.
+            </p>
+            <ul class="tags" aria-label="Skills">
+              <li>Mechanical prototyping</li>
+              <li>CAD</li>
+              <li>Belt drives</li>
+              <li>Dynamixel</li>
+              <li>Python</li>
+              <li>PID control</li>
+              <li>Computer vision</li>
+              <li>Rapid prototyping</li>
+            </ul>
+          </div>
+          <nav class="project-pagination" aria-label="Other projects">
+            <a href="furpack.html"><span>← Previous project</span>The Furpack</a
+            ><a href="cobot.html"
+              ><span>Next project →</span>Voice-Controlled Cobot System</a
+            >
+          </nav>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container footer-inner">
+        <span>© 2026 Anton Kühr</span
+        ><a
+          href="https://www.linkedin.com/in/anton-kuehr/"
+          target="_blank"
+          rel="noopener"
+          >LinkedIn ↗</a
+        >
+      </div>
+    </footer>
+  </body>
+</html>
