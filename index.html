@@ -47,8 +47,8 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="site.js" defer></script>
+    <link rel="stylesheet" href="styles.css?v=17" />
+    <script src="site.js?v=4" defer></script>
     <link rel="canonical" href="https://antonkuehr.github.io/akrobotics/" />
     <meta
       property="og:url"
@@ -75,9 +75,9 @@
           Menu <span aria-hidden="true">＋</span>
         </button>
         <nav id="site-nav" aria-label="Main navigation">
-          <a href="#about">About me</a><a href="#education">Education</a
-          ><a href="#work">Work</a><a href="#projects">Portfolio</a
-          ><a href="#community">Volunteering</a><a href="#skills">Skills</a
+          <a href="#about-me">About me</a><a href="#education">Education</a
+          ><a href="#jobs">Jobs</a><a href="#portfolio">Portfolio</a
+          ><a href="#volunteering">Volunteering</a><a href="#skills">Skills</a
           ><a href="#contact">Contact</a
           ><a
             class="nav-social"
@@ -103,7 +103,7 @@
               BSc in Product Engineering - Pursuing MSc in Robotics at TU Delft
             </p>
             <div class="actions">
-              <a class="button primary" href="#projects"
+              <a class="button primary" href="#portfolio"
                 >Explore my work <span aria-hidden="true">↓</span></a
               ><a
                 class="button"
@@ -133,11 +133,13 @@
           </figure>
         </div>
         <div class="container hero-bottom">
-          <a href="#about" aria-label="Read about Anton">Scroll to explore ↓</a>
+          <a href="#about-me" aria-label="Read about Anton"
+            >Scroll to explore ↓</a
+          >
         </div>
       </section>
       <!-- ABOUT ME: biography plus personal details, robot photo, and hobbies. -->
-      <section id="about" class="section">
+      <section id="about-me" class="section">
         <div class="container about-grid">
           <div class="about-copy">
             <h2 class="section-title">01 / About me</h2>
@@ -224,7 +226,7 @@
         </div>
       </section>
 
-      <!-- EDUCATION: stacked MSc and BSc cards; BSc contains scholarship and radio highlights. -->
+      <!-- EDUCATION: stacked MSc, BSc, and high school cards; BSc contains scholarship and radio highlights. -->
       <section id="education" class="section">
         <div class="container">
           <h2 class="section-title">02 / Education</h2>
@@ -328,54 +330,81 @@
                   >View transcript ↗</a
                 >
               </div>
-              <div class="education-highlights">
-                <div class="education-highlight">
-                  <p class="date">Apr 2023 – Mar 2026</p>
-                  <h4>Deutschlandstipendium</h4>
-                  <p>
-                    National merit-based scholarship, awarded by TH Köln.
-                    Co-funded by the German Federal Government and Alfred
-                    Schütte GmbH.
-                  </p>
-                  <div class="document-links">
-                    <a
-                      class="text-link"
-                      href="assets/site/certificates/Certificate%20Germany%20Scholarship%20Anton%20Kuehr.pdf"
-                      target="_blank"
-                      rel="noopener"
-                      >View scholarship certificate (in German) ↗</a
-                    >
-                  </div>
-                </div>
-                <div class="education-highlight">
-                  <p class="date">17 Dec 2024 · Deutschlandfunk</p>
-                  <h4>Radio interview</h4>
-                  <p>
-                    Interviewed alongside Prof. Martin Bonnet about TH Köln’s
-                    Product Engineering and Context programme, new teaching
-                    methods, and interdisciplinary learning.
-                  </p>
-                  <div class="document-links">
-                    <a
-                      class="text-link"
-                      href="https://www.deutschlandfunk.de/neuer-studiengang-neue-lehrmethoden-der-experimentalstudiengang-maschinenbau-dlf-073e9d7f-100.html"
-                      target="_blank"
-                      rel="noopener"
-                      >Listen to the broadcast (in German) ↗</a
-                    >
-                  </div>
-                </div>
-              </div>
             </article>
+            <details class="expandable-list education-expand" data-expandable>
+              <summary>
+                View full education<span class="chevron" aria-hidden="true"></span>
+              </summary>
+              <div class="expandable-content">
+                <div class="education-highlights">
+                  <div class="education-highlight">
+                    <p class="date">Apr 2023 – Mar 2026</p>
+                    <h4>Deutschlandstipendium</h4>
+                    <p>
+                      National merit-based scholarship, awarded by TH Köln.
+                      Co-funded by the German Federal Government and Alfred
+                      Schütte GmbH.
+                    </p>
+                    <div class="document-links">
+                      <a
+                        class="text-link"
+                        href="assets/site/certificates/Certificate%20Germany%20Scholarship%20Anton%20Kuehr.pdf"
+                        target="_blank"
+                        rel="noopener"
+                        >View scholarship certificate (in German) ↗</a
+                      >
+                    </div>
+                  </div>
+                  <div class="education-highlight">
+                    <p class="date">17 Dec 2024 · Deutschlandfunk</p>
+                    <h4>Radio interview</h4>
+                    <p>
+                      Interviewed alongside Prof. Martin Bonnet about TH Köln’s
+                      Product Engineering and Context programme, new teaching
+                      methods, and interdisciplinary learning.
+                    </p>
+                    <div class="document-links">
+                      <a
+                        class="text-link"
+                        href="https://www.deutschlandfunk.de/neuer-studiengang-neue-lehrmethoden-der-experimentalstudiengang-maschinenbau-dlf-073e9d7f-100.html"
+                        target="_blank"
+                        rel="noopener"
+                        >Listen to the broadcast (in German) ↗</a
+                      >
+                    </div>
+                  </div>
+                </div>
+                <article class="education-card">
+                  <div class="education-heading">
+                    <div>
+                      <p class="date">Sep 2013 – Jul 2021</p>
+                      <h3>
+                        Abitur · General qualification for university entrance
+                      </h3>
+                    </div>
+                  </div>
+                  <p class="org-name">At Gymnasium Kreuzgasse · Cologne, Germany</p>
+                  <p>
+                    French–German bilingual school with an emphasis on sciences and
+                    languages.
+                  </p>
+                  <div class="education-note">Final grade: 1.3 (excellent)</div>
+                </article>
+              </div>
+              <button class="expandable-close" type="button">
+                Show less
+                <span class="chevron chevron--up" aria-hidden="true"></span>
+              </button>
+            </details>
           </div>
         </div>
       </section>
       <!-- WORK: main job entries and the expandable list of earlier roles. -->
-      <section id="work" class="section">
+      <section id="jobs" class="section">
         <div class="container">
           <div class="section-heading">
             <div>
-              <h2 class="section-title">03 / Work</h2>
+              <h2 class="section-title">03 / Jobs</h2>
             </div>
           </div>
           <div class="role-list">
@@ -475,9 +504,9 @@
               </ul>
             </article>
           </div>
-          <details class="expandable-list">
+          <details class="expandable-list" data-expandable>
             <summary>
-              View all work references<span aria-hidden="true">＋</span>
+              View all jobs<span class="chevron" aria-hidden="true"></span>
             </summary>
             <div class="role-list expandable-content">
               <article class="role">
@@ -551,11 +580,15 @@
                 </ul>
               </article>
             </div>
+            <button class="expandable-close" type="button">
+              Show less jobs
+              <span class="chevron chevron--up" aria-hidden="true"></span>
+            </button>
           </details>
         </div>
       </section>
       <!-- PORTFOLIO: six project cards linking to their detail pages. -->
-      <section id="projects" class="section">
+      <section id="portfolio" class="section">
         <div class="container">
           <div class="section-heading">
             <div>
@@ -578,8 +611,7 @@
                 <span class="image-arrow" aria-hidden="true">↗</span>
               </div>
               <div class="card-meta">
-                <span>01 / Tactile sensing</span
-                ><span>09/2024 – 03/2025 · 09/2026 – present</span>
+                <span>09/2024 – 03/2025 · 09/2026 – present</span>
               </div>
               <h3>Robotic skin development</h3>
               <p>
@@ -590,10 +622,10 @@
               ><div class="project-image audio audio-card">
                 <img
                   class="furhat-card"
-                  src="assets/projects/furhat-audio/furhat.png"
+                  src="assets/projects/furhat-audio/furhat.png?v=70ddf10f"
                   alt="The Furhat social robot"
-                  width="168"
-                  height="260"
+                  width="821"
+                  height="1222"
                   loading="lazy"
                 /><img
                   src="assets/projects/furhat-audio/microphone-mount.png"
@@ -605,8 +637,7 @@
                 ><span class="image-arrow" aria-hidden="true">↗</span>
               </div>
               <div class="card-meta">
-                <span>02 / Bachelor’s thesis</span
-                ><span>11/2025 – 03/2026</span>
+                <span>11/2025 – 03/2026</span>
               </div>
               <h3>Furhat’s audio system</h3>
               <p>
@@ -625,8 +656,7 @@
                 ><span class="image-arrow" aria-hidden="true">↗</span>
               </div>
               <div class="card-meta">
-                <span>03 / Product development</span
-                ><span>07/2025 - 04/2026</span>
+                <span>07/2025 - 04/2026</span>
               </div>
               <h3>Furpack — a backpack for Furhat</h3>
               <p>
@@ -645,8 +675,7 @@
                 ><span class="image-arrow" aria-hidden="true">↗</span>
               </div>
               <div class="card-meta">
-                <span>04 / Mechanical prototyping</span
-                ><span>06/2025 - 07/2025</span>
+                <span>06/2025 - 07/2025</span>
               </div>
               <h3>Furhat’s 360-degree mechanism</h3>
               <p>
@@ -665,8 +694,7 @@
                 ><span class="image-arrow" aria-hidden="true">↗</span>
               </div>
               <div class="card-meta">
-                <span>05 / Human–robot interaction</span
-                ><span>04/2024 - 03/2025</span>
+                <span>04/2024 - 03/2025</span>
               </div>
               <h3>Voice-controlled cobot system</h3>
               <p>
@@ -677,17 +705,16 @@
               ><div class="project-image contain harvest-card">
                 <img
                   class="harvest-card-image"
-                  src="assets/projects/harvesting-robot/rover.png"
+                  src="assets/projects/harvesting-robot/rover.png?v=bb83ed22"
                   alt="Autonomous harvesting robot prototype"
                   loading="lazy"
-                  width="606"
-                  height="356"
+                  width="704"
+                  height="528"
                 /><span class="badge">BSc project</span
                 ><span class="image-arrow" aria-hidden="true">↗</span>
               </div>
               <div class="card-meta">
-                <span>06 / Autonomous robotics</span
-                ><span>09/2023 - 08/2024</span>
+                <span>09/2023 - 08/2024</span>
               </div>
               <h3>Autonomous harvesting robot</h3>
               <p>
@@ -698,8 +725,8 @@
           </div>
         </div>
       </section>
-      <!-- VOLUNTEERING: student roles and other volunteering. The community ID preserves existing links. -->
-      <section id="community" class="section">
+      <!-- VOLUNTEERING: date, role, and organisation for each entry. -->
+      <section id="volunteering" class="section">
         <div class="container">
           <div class="section-heading">
             <div>
@@ -709,16 +736,18 @@
           <div class="volunteer-preview">
             <article>
               <p class="date">Oct 2022 – Apr 2026</p>
-              <h3>Student Council · TH Köln</h3>
+              <h3>Student Council Member</h3>
+              <p class="org-name">At TH Köln · Cologne, Germany</p>
               <p>
-                I actively contributed to committees, fostered communication
-                with professors, organised events, and advocated for key topics
-                to support the academic community.
+                Actively contributed to committees, fostered communication with
+                professors, organised events, and advocated for key topics to
+                support the academic community.
               </p>
             </article>
             <article>
               <p class="date">Nov 2025 – Feb 2026</p>
               <h3>Erasmus Ambassador</h3>
+              <p class="org-name">At TH Köln · Cologne, Germany</p>
               <p>
                 Supported students preparing for exchange semesters at TH Köln.
               </p>
@@ -735,6 +764,7 @@
             <article>
               <p class="date">Jul – Sep 2024</p>
               <h3>Jury Member &amp; Workshop Leader</h3>
+              <p class="org-name">At TH Köln · Cologne, Germany</p>
               <p>
                 Evaluated teaching concepts and co-led a workshop on new
                 teaching methods at the Day of Excellent Teaching.
@@ -750,20 +780,25 @@
               </div>
             </article>
           </div>
-          <details class="expandable-list volunteering-expand">
+          <details class="expandable-list volunteering-expand" data-expandable>
             <summary>
-              View all volunteering references
-              <span aria-hidden="true">＋</span>
+              View more volunteerings
+              <span class="chevron" aria-hidden="true"></span>
             </summary>
             <div class="volunteer-preview expandable-content">
               <article>
                 <p class="date">Feb 2026 – present</p>
-                <h3>Student Tutor · Lern-Fair</h3>
-                <p>I occasionally volunteer as a tutor for students.</p>
+                <h3>Student Tutor</h3>
+                <p class="org-name">At Lern-Fair e.V.</p>
+                <p>
+                  Occasionally volunteer as a tutor for educationally
+                  disadvantaged pupils and apprentices aged 7 to 27.
+                </p>
               </article>
               <article>
                 <p class="date">Nov 2024 – Aug 2026</p>
-                <h3>Member · Enactus Köln</h3>
+                <h3>Member</h3>
+                <p class="org-name">At Enactus Köln · Cologne, Germany</p>
                 <p>
                   Member of a student association focused on social
                   entrepreneurship and community engagement.
@@ -771,7 +806,8 @@
               </article>
               <article>
                 <p class="date">Apr – Jun 2022</p>
-                <h3>Flood Relief · Dachzeltnomaden</h3>
+                <h3>Relief Worker</h3>
+                <p class="org-name">At Dachzeltnomaden · Ahr Valley, Germany</p>
                 <p>
                   Supported recovery after the Ahr Valley floods through
                   construction work, social media, and organisation.
@@ -789,12 +825,17 @@
               <article>
                 <p class="date">Sep 2021 – Apr 2022</p>
                 <h3>Geriatric Care Assistant</h3>
+                <p class="org-name">At Senioren Herz Jesu</p>
                 <p>
                   Supported care activities and musical entertainment during an
                   internship at Senioren Herz Jesu.
                 </p>
               </article>
             </div>
+            <button class="expandable-close" type="button">
+              Show less volunteering
+              <span class="chevron chevron--up" aria-hidden="true"></span>
+            </button>
           </details>
         </div>
       </section>
@@ -952,16 +993,10 @@
         </div>
       </section>
     </main>
-    <!-- FOOTER: copyright and LinkedIn. -->
+    <!-- FOOTER: centered copyright. -->
     <footer>
       <div class="container footer-inner">
-        <span>© 2026 Anton Kühr</span
-        ><a
-          href="https://www.linkedin.com/in/anton-kuehr/"
-          target="_blank"
-          rel="noopener"
-          >LinkedIn ↗</a
-        >
+        <span>© 2026 Anton Kühr</span>
       </div>
     </footer>
   </body>

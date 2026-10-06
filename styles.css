@@ -42,6 +42,7 @@
   --radius-sm: 8px;
   --radius: 12px;
   --radius-lg: 16px;
+  --entry-gap: 24px;
 
   --fg: #f1f8f4;
   --fg-2: #c9ddd4;
@@ -250,18 +251,6 @@ a {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.back-link {
-  font-family: var(--sans);
-  font-weight: 400;
-  font-size: var(--text-label);
-  line-height: 1.7;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  display: inline-block;
-  color: var(--muted);
-  margin-bottom: 36px;
 }
 
 .section-heading {
@@ -685,14 +674,16 @@ a {
 }
 
 .education-grid {
+  --education-padding: 28px;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 30px;
+  gap: var(--entry-gap);
+  max-width: 760px;
   margin-top: 36px;
 }
 
 .education-card {
-  padding: 28px;
+  padding: var(--education-padding);
   border: 1px solid var(--line);
   border-top: 2px solid var(--accent);
   background: rgba(var(--surface-rgb), 0.8);
@@ -720,6 +711,34 @@ a {
 .education-highlights {
   margin-top: 28px;
   border-top: 1px solid var(--line);
+}
+
+.education-grid > .education-expand {
+  margin-top: 0;
+}
+
+.education-expand .education-highlights {
+  margin-top: 0;
+  margin-bottom: var(--entry-gap);
+  padding: 0 var(--education-padding) var(--education-padding);
+  border: 1px solid var(--line);
+  border-top: 0;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+  background: rgba(var(--surface-rgb), 0.8);
+}
+
+.js .education-card:has(+ .education-expand[open]) {
+  border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.js .education-grid > .education-expand[open] {
+  margin-top: calc(-1 * var(--entry-gap));
+}
+
+.education-expand .education-highlight:first-child {
+  padding-top: 0;
 }
 
 .education-highlight {
@@ -814,7 +833,7 @@ a {
 .project-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 42px 30px;
+  gap: 42px 48px;
 }
 
 .project-card h3 {
@@ -830,7 +849,7 @@ a {
   letter-spacing: 0.05em;
   text-transform: uppercase;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 4px 12px;
   color: var(--muted);
@@ -920,7 +939,8 @@ a {
 /* WORK — Job cards, employer names, bullet lists, and grouped Furhat roles. */
 .role-list {
   display: grid;
-  gap: 20px;
+  gap: var(--entry-gap);
+  max-width: 760px;
 }
 
 .body-list li + li {
@@ -967,11 +987,7 @@ a {
   font: 500 var(--text-body)/1.65 var(--sans);
 }
 
-.expandable-content.role-list {
-  gap: 20px;
-}
-
-/* VOLUNTEERING & EXPANDABLE LISTS — Volunteering cards and View all work / View all volunteering controls. */
+/* VOLUNTEERING & EXPANDABLE LISTS — Consistent entry gaps and animated View more controls. */
 .volunteer-preview article {
   padding: 22px;
   border: 1px solid var(--line);
@@ -982,57 +998,82 @@ a {
 
 .volunteer-preview h3 {
   font-size: var(--text-heading);
-  margin: 8px 0;
+  margin: 4px 0 0;
 }
 
-.volunteer-preview p:last-child {
+.volunteer-preview article > p:not(.date):not(.org-name) {
   color: var(--fg-2);
   font-size: var(--text-small);
+}
+
+.volunteer-preview .org-name {
+  margin-bottom: 20px;
 }
 
 .volunteer-preview {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 20px;
+  gap: var(--entry-gap);
   margin-top: 30px;
 }
 
 .expandable-list {
-  margin-top: 28px;
-  border-top: 1px solid var(--line);
+  margin-top: var(--entry-gap);
+}
+
+#jobs .expandable-list {
+  max-width: 760px;
 }
 
 .expandable-list summary::-webkit-details-marker {
   display: none;
 }
 
-.expandable-list summary span {
-  font-size: var(--text-lead);
-  line-height: 1;
-}
-
-.expandable-list[open] summary span {
+.chevron {
+  width: 9px;
+  height: 9px;
+  flex: none;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
   transform: rotate(45deg);
 }
 
+.chevron--up {
+  transform: rotate(225deg);
+}
+
+.js .expandable-list[open] > summary {
+  display: none;
+}
+
 .expandable-content {
-  margin-top: 24px;
+  margin-top: 0;
 }
 
-.volunteering-expand {
-  margin-top: 30px;
-}
-
-.expandable-list summary {
-  display: flex;
+.expandable-list summary,
+.expandable-close {
+  display: inline-flex;
+  align-items: center;
   justify-content: flex-start;
   gap: 12px;
-  padding-top: 18px;
+  min-height: 44px;
+  padding: 8px 0;
+  border: 0;
+  background: none;
   color: var(--accent);
   cursor: pointer;
   font-size: var(--text-body);
   font-weight: 500;
   list-style: none;
+}
+
+.expandable-close {
+  display: none;
+  margin-top: var(--entry-gap);
+}
+
+.js .expandable-close {
+  display: inline-flex;
 }
 
 .skills-grid {
@@ -1047,9 +1088,7 @@ a {
 }
 
 .skills-grid--secondary {
-  margin-top: 64px;
-  padding-top: 42px;
-  border-top: 1px solid var(--line);
+  margin-top: 44px;
 }
 
 .skill-group {
@@ -1153,14 +1192,11 @@ a {
 
 .footer-inner {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  text-align: center;
   flex-wrap: wrap;
   gap: 18px;
   color: var(--muted);
-  font-size: var(--text-small);
-}
-
-.footer-inner > a:nth-child(2) {
   font-size: var(--text-small);
 }
 
@@ -1222,7 +1258,7 @@ a {
 }
 
 .project-hero {
-  padding: 0px 0 0px;
+  padding: 64px 0 0;
 }
 
 .project-hero h1 {
@@ -1237,6 +1273,33 @@ a {
   color: var(--fg-2);
   max-width: 710px;
   margin-top: 24px;
+}
+
+.project-collaborators {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  max-width: 710px;
+  margin-top: 16px;
+  font-size: var(--text-small);
+  color: var(--fg-2);
+  line-height: 1.8;
+}
+
+.project-collaborators a {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(var(--surface-rgb), 0.8);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.project-collaborators a:hover {
+  border-color: var(--accent);
 }
 
 .project-facts {
@@ -1343,6 +1406,29 @@ a {
   overflow: hidden;
 }
 
+.project-short {
+  max-width: 360px;
+  margin: 48px auto 0;
+}
+
+.case-study-section .project-short {
+  width: 100%;
+  justify-self: center;
+}
+
+.media-embed--short {
+  aspect-ratio: 9/16;
+}
+
+.project-short figcaption {
+  text-align: center;
+}
+
+.project-short figcaption .text-link {
+  display: block;
+  margin-top: 8px;
+}
+
 .media-embed iframe {
   position: absolute;
   inset: 0;
@@ -1358,6 +1444,10 @@ a {
 
 .case-study-copy h2 {
   margin-bottom: 16px;
+}
+
+.case-study-copy h3 {
+  margin: 24px 0 12px;
 }
 
 .case-study-copy p:not(.eyebrow) {
@@ -1414,6 +1504,11 @@ a {
   gap: 42px;
   align-items: start;
   margin: 78px 0;
+}
+
+/* Text and supporting content span the page when there is no accompanying image. */
+.case-study-section:not(:has(img)):not(.case-study-section--video) {
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .result-section .result-description {
@@ -1559,48 +1654,11 @@ a {
   font-size: var(--text-label);
 }
 
-.subsystem-section .case-study-copy {
-  margin-bottom: 22px;
-}
-
-.subsystem-grid figure {
-  margin: 0;
-  padding: 18px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
-  background: rgba(var(--surface-rgb), 0.45);
-}
-
-.subsystem-grid .gallery-image {
-  min-height: 180px;
-}
-
-.subsystem-grid h3 {
-  margin-top: 20px;
-  font-size: var(--text-heading);
-}
-
-.subsystem-grid p {
-  margin-top: 8px;
-  color: var(--fg-2);
-  font-size: var(--text-small);
-}
-
-.subsystem-grid figcaption {
-  margin-top: 14px;
-}
-
 .metric-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
   margin-top: 14px;
-}
-
-.subsystem-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
 }
 
 .cobot-page .cobot-concept-section .gallery-image {
@@ -1624,26 +1682,11 @@ a {
   margin-top: 28px;
 }
 
-.cobot-page .subsystem-section {
-  display: block;
-}
-
 .cobot-prototype-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
   gap: 42px;
   align-items: start;
-}
-
-.cobot-page .subsystem-grid .gallery-image {
-  min-height: 270px;
-  padding: 22px;
-  background: var(--image-bg);
-}
-
-.cobot-page .subsystem-grid .gallery-image img {
-  height: 220px;
-  object-fit: contain;
 }
 
 /* WIDE SCREENS — 1500px and wider */
@@ -1749,13 +1792,10 @@ a {
     margin: 0;
   }
   .education-grid {
-    gap: 22px;
-  }
-  .education-card {
-    padding: 23px;
+    --education-padding: 23px;
   }
   .project-grid {
-    gap: 32px 22px;
+    gap: 32px 32px;
   }
   .role {
     padding: 23px;
@@ -1926,18 +1966,8 @@ a {
     grid-template-columns: 1fr;
     gap: 24px;
   }
-  .footer-inner {
-    justify-content: start;
-  }
-  .footer-inner > a:nth-child(2) {
-    order: 3;
-    flex-basis: 100%;
-  }
-  .footer-inner > a:last-child {
-    margin-left: auto;
-  }
   .project-hero {
-    padding: 30px 0 38px;
+    padding: 48px 0 38px;
   }
   .project-facts {
     grid-template-columns: 1fr;
@@ -1965,12 +1995,6 @@ a {
   }
   .cobot-page .cobot-prototype-section figure {
     grid-column: auto;
-  }
-  .cobot-page .subsystem-grid .gallery-image {
-    min-height: 220px;
-  }
-  .cobot-page .subsystem-grid .gallery-image img {
-    height: 180px;
   }
 }
 

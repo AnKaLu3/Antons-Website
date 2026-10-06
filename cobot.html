@@ -20,8 +20,8 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="site.js" defer></script>
+    <link rel="stylesheet" href="styles.css?v=17" />
+    <script src="site.js?v=4" defer></script>
   </head>
   <body class="cobot-page">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -38,8 +38,8 @@
           Menu <span aria-hidden="true">＋</span>
         </button>
         <nav id="site-nav" aria-label="Main navigation">
-          <a href="index.html#projects">← All projects</a
-          ><a href="index.html#about">About me</a
+          <a href="index.html#portfolio">← All projects</a
+          ><a href="index.html#about-me">About me</a
           ><a href="index.html#contact">Contact</a
           ><a
             class="nav-social"
@@ -54,7 +54,6 @@
     <main id="main">
       <section class="project-hero">
         <div class="container narrow">
-          <a class="back-link" href="index.html#projects">← Selected work</a>
           <p class="eyebrow">
             04/2024 - 03/2025 Service and Industry Robotics Course at TH Köln
           </p>
@@ -62,6 +61,13 @@
           <p class="project-lead">
             A collaborative robot that understands spoken requests, finds the
             requested tool and fetches or stows it in a shared workspace.
+          </p>
+          <p class="project-collaborators">
+            <span>In collaboration with:</span>
+            <a href="https://www.linkedin.com/in/lukas-sondenheimer-1a76942ba/" target="_blank" rel="noopener">Lukas Sondenheimer ↗</a>
+            <a href="https://www.linkedin.com/in/denis-tolkovets/" target="_blank" rel="noopener">Denis Tolkovets ↗</a>
+            <a href="https://www.linkedin.com/in/timon-l%C3%BCbken-583886330/" target="_blank" rel="noopener">Timon Lübken ↗</a>
+            <a href="https://www.linkedin.com/in/fabio-jain-947705179/" target="_blank" rel="noopener">Fabio Jain ↗</a>
           </p>
         </div>
       </section>
@@ -157,72 +163,31 @@
               </figcaption>
             </figure>
           </div>
-          <div class="case-study-section subsystem-section">
+          <div class="case-study-section">
             <div class="case-study-copy">
               <p class="eyebrow">04 / Speech, vision and arm</p>
               <h2>Breaking the interaction into specialised subsystems.</h2>
-            </div>
-            <div class="subsystem-grid">
-              <figure>
-                <div class="gallery-image contain">
-                  <img
-                    src="assets/projects/voice-cobot/uml-speech-service.svg"
-                    alt="Speech service with recording, Whisper transcription and command interpretation"
-                    loading="lazy"
-                  />
-                </div>
-                <h3>Speech</h3>
-                <p>
-                  The speech service handled recording and transcription before
-                  matching the spoken request to an intended command. The
-                  pipeline connected speech-to-text, language-based command
-                  interpretation and text-to-speech for hands-free interaction.
-                </p>
-                <figcaption>
-                  Speech service — recording, Whisper transcription and command
-                  interpretation.
-                </figcaption>
-              </figure>
-              <figure>
-                <div class="gallery-image contain">
-                  <img
-                    src="assets/projects/voice-cobot/uml-vision-service.svg"
-                    alt="Vision service using oriented object detection to locate requested tools"
-                    loading="lazy"
-                  />
-                </div>
-                <h3>Vision</h3>
-                <p>
-                  The vision service used oriented object detection to identify
-                  tools and provide their spatial position for manipulation.
-                  Through iterative training, the YOLO11-OBB model reached
-                  approximately 81% mAP50–95.
-                </p>
-                <figcaption>
-                  Vision service — oriented tool detection and spatial
-                  coordinates for the requested object.
-                </figcaption>
-              </figure>
-              <figure>
-                <div class="gallery-image contain">
-                  <img
-                    src="assets/projects/voice-cobot/uml-arm-service.svg"
-                    alt="Arm service executing fetching, stowing and rest-position routines"
-                    loading="lazy"
-                  />
-                </div>
-                <h3>Arm</h3>
-                <p>
-                  The arm service executed fetching and stowing routines. When
-                  orientation constraints caused problems with MoveIt, I derived
-                  closed-form inverse kinematics for the 4-DOF arm so the
-                  required poses could be reached reliably.
-                </p>
-                <figcaption>
-                  Arm service — manipulation routines for fetching, stowing and
-                  returning the arm to its rest position.
-                </figcaption>
-              </figure>
+              <h3>Speech</h3>
+              <p>
+                The speech service handled recording and transcription before
+                matching the spoken request to an intended command. The
+                pipeline connected speech-to-text, language-based command
+                interpretation and text-to-speech for hands-free interaction.
+              </p>
+              <h3>Vision</h3>
+              <p>
+                The vision service used oriented object detection to identify
+                tools and provide their spatial position for manipulation.
+                Through iterative training, the YOLO11-OBB model reached
+                approximately 81% mAP50–95.
+              </p>
+              <h3>Arm</h3>
+              <p>
+                The arm service executed fetching and stowing routines. When
+                orientation constraints caused problems with MoveIt, I derived
+                closed-form inverse kinematics for the 4-DOF arm so the
+                required poses could be reached reliably.
+              </p>
             </div>
           </div>
           <div class="case-study-section">
@@ -273,13 +238,7 @@
     </main>
     <footer>
       <div class="container footer-inner">
-        <span>© 2026 Anton Kühr</span
-        ><a
-          href="https://www.linkedin.com/in/anton-kuehr/"
-          target="_blank"
-          rel="noopener"
-          >LinkedIn ↗</a
-        >
+        <span>© 2026 Anton Kühr</span>
       </div>
     </footer>
   </body>
