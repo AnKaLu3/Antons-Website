@@ -16,7 +16,7 @@
   WORK CARD ALIGNMENT: .role-heading and .role
   NAVIGATION NAME: .wordmark; browser favicon: assets/site/favicon-smile.svg
   COLOURS & CORNERS: variables in :root, including --radius-sm, --radius, and --radius-lg
-  LANGUAGE LEVELS: .language-row span
+  LANGUAGES: .language-skills; shared list styling: .skills-grid ul
 
   .name matches class="name" in HTML; #name matches id="name".
   margin is outside spacing; padding is inside spacing; gap separates items.
@@ -36,6 +36,7 @@
   --surface-rgb: 12, 48, 39;
   --image-bg: #fff;
   --image-muted: #eef5f0;
+  --portfolio-image-bg: #b8cbbd;
 
   /* Corner sizes: controls, images, and larger cards. */
   --radius-sm: 8px;
@@ -352,10 +353,6 @@ a {
   color: var(--fg);
 }
 
-#site-nav a[href="#certifications"] {
-  display: none;
-}
-
 .header-inner {
   min-height: 74px;
   display: flex;
@@ -451,6 +448,7 @@ a {
 
 .hero-bottom a {
   color: var(--accent);
+  text-align: right;
 }
 
 .portrait-frame {
@@ -495,7 +493,7 @@ a {
 .hero-bottom {
   margin-top: 48px;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 24px;
   padding-block: 24px;
   border-top: 1px solid var(--line);
@@ -773,8 +771,9 @@ a {
 }
 
 .project-image.backpack-card {
-  background: var(--image-bg);
+  background: var(--portfolio-image-bg);
 }
+
 
 .project-card > p {
   order: 3;
@@ -845,7 +844,7 @@ a {
   justify-content: center;
   gap: 18px;
   padding: 20px;
-  background: var(--image-muted);
+  background: var(--portfolio-image-bg);
 }
 
 .project-card:hover .project-image {
@@ -862,7 +861,7 @@ a {
 }
 
 .project-image.audio-card {
-  background: var(--image-bg);
+  background: var(--portfolio-image-bg);
 }
 
 .project-image {
@@ -873,7 +872,7 @@ a {
   transition: transform 0.2s;
   height: 300px;
   aspect-ratio: auto;
-  background: var(--image-bg);
+  background: var(--portfolio-image-bg);
 }
 
 .project-image > img {
@@ -885,13 +884,13 @@ a {
 }
 
 .project-image.skin-card {
-  background-color: var(--image-bg) !important;
+  background-color: var(--portfolio-image-bg) !important;
 }
 
 .project-image.harvest-card {
   border: 0;
-  background: var(--image-bg);
-  background-color: var(--image-bg) !important;
+  background: var(--portfolio-image-bg);
+  background-color: var(--portfolio-image-bg) !important;
 }
 
 .project-image.skin-card > img {
@@ -959,10 +958,13 @@ a {
 .role-group {
   display: grid;
   gap: 22px;
+  margin-top: 22px;
 }
 
-.role-group .role-subentry + .role-subentry {
-  padding-top: 0px;
+.role-subentry h4 {
+  margin: 0 0 4px;
+  color: var(--fg);
+  font: 500 var(--text-body)/1.65 var(--sans);
 }
 
 .expandable-content.role-list {
@@ -973,6 +975,7 @@ a {
 .volunteer-preview article {
   padding: 22px;
   border: 1px solid var(--line);
+  border-top: 2px solid var(--accent);
   border-radius: var(--radius-lg);
   background: rgba(var(--surface-rgb), 0.84);
 }
@@ -1032,68 +1035,59 @@ a {
   list-style: none;
 }
 
-/* SKILLS, CERTIFICATES & LANGUAGES — Skill columns, certificate cards, language names, and proficiency text. */
-.skills-grid article {
-  border-top: 1px solid var(--edge);
-  padding-top: 20px;
-}
-
-.skills-grid li + li {
-  margin-top: 8px;
-}
-
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 28px;
-  margin-top: 40px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 64px;
+  width: 100%;
 }
 
-.skills-grid h3 {
-  font-size: var(--text-heading);
+.skills-grid--primary {
+  margin-top: 44px;
 }
 
-.skills-grid ul {
-  list-style: none;
-  padding: 0;
-  margin: 18px 0 0;
-  color: var(--fg-2);
-  font-size: var(--text-body);
-}
-
-.language-row span {
-  display: block;
-  margin-top: 4px;
-  font: inherit;
-  font-size: var(--text-body);
-  color: var(--fg-2);
-}
-
-.language-row p {
-  font-size: var(--text-body);
-}
-
-.language-row {
-  flex-wrap: wrap;
+.skills-grid--secondary {
+  margin-top: 64px;
+  padding-top: 42px;
   border-top: 1px solid var(--line);
-  margin-top: 52px;
-  padding: 28px 0;
-  gap: 24px 40px;
-  display: grid;
-  grid-template-columns: 1.2fr repeat(4, 1fr);
-  align-items: start;
 }
 
-.language-row h3 {
-  font-size: var(--text-heading);
+.skill-group {
+  min-width: 0;
+}
+
+.skill-group h3 {
+  margin: 0 0 22px;
+}
+
+.skill-group ul {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
   margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-.skills-certifications {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 30px;
-  margin-top: 36px;
+.skill-group li {
+  color: var(--fg-2);
+  line-height: 1.5;
+}
+
+/* Linked skills look exactly like normal skills */
+
+.skill-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.skill-link span {
+  color: var(--accent);
+  font-size: 0.8em;
+}
+
+.skill-link:hover {
+  color: var(--fg);
 }
 
 /* CONTACT — One wide block; email, phone, LinkedIn, and location share a row. */
@@ -1667,6 +1661,9 @@ a {
 
 /* SMALL DESKTOPS — 1000px and narrower */
 @media (max-width: 1000px) {
+  .skills-grid--primary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .container {
     width: calc(100% - 48px);
   }
@@ -1685,9 +1682,6 @@ a {
   }
   .about-grid {
     gap: 45px;
-  }
-  .skills-grid {
-    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -1768,16 +1762,6 @@ a {
   }
   .volunteer-preview {
     grid-template-columns: 1fr 1fr;
-  }
-  .language-row {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px 32px;
-  }
-  .language-row h3 {
-    grid-column: 1/-1;
-  }
-  .skills-certifications {
-    gap: 22px;
   }
   .contact-details {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1896,9 +1880,6 @@ a {
   .hero-bottom > span {
     max-width: 175px;
   }
-  .hero-bottom > a {
-    text-align: right;
-  }
   .hero-bottom {
     margin-top: 36px;
     line-height: 1.7;
@@ -1942,18 +1923,8 @@ a {
     grid-template-columns: 1fr;
   }
   .skills-grid {
-    gap: 24px 20px;
-  }
-  .language-row {
     grid-template-columns: 1fr;
-    gap: 18px;
-  }
-  .language-row h3 {
-    width: 100%;
-    grid-column: auto;
-  }
-  .skills-certifications {
-    grid-template-columns: 1fr;
+    gap: 24px;
   }
   .footer-inner {
     justify-content: start;
