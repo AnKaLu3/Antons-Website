@@ -75,7 +75,7 @@ ROTATION root: `/Users/antonkuhr/Documents/Arbeit/Furhat/360 Rotation/`.
 
 | Public claim / section | Basis and scope |
 |---|---|
-| Two-week rotating-base proof of concept; existing website period and colleague credits retained | ROT-REPORT introduction/process and ROT-DECK; EXISTING for June–July and Qing Gu. Exact date/name differences are in CONTENT_GAPS.md. |
+| Two-week rotating-base proof of concept; documented 05/2025 build and existing colleague credits | ROT-REPORT introduction/process and ROT-DECK; EXISTING for June–July and Qing Gu. Exact date/name differences are in CONTENT_GAPS.md. |
 | Belt and vertical-wheel physical prototypes, weighted trials, belt selected and wheel lessons reused | ROT-REPORT Initial Concepts / Simple Prototypes; ROT-DECK slides 6–9. No comparative numerical superiority claim. |
 | Offset servo beneath NUC, left-side room/airflow constraint, split mount, printed pulley and bearing/axis support | ROT-REPORT mechanical subsections. Repurposed neck bearing not primarily designed for axial robot-weight load. |
 | Prototype dimensions: 160 mm × 5 mm baseplate, approximately 3 mm clearance, 200 mm × 6 mm GT2 belt, approximately 18 mm height and 80 mm offset | ROT-REPORT mechanical subsections. Optional construction dimensions, not precision or safety ratings. |
@@ -139,7 +139,7 @@ The portfolio grid, order and image wrappers were preserved. Five card summaries
 
 ## Technical-figure revision — 7 October 2026
 
-The Cobot figure now retains the articulated geometry, top/side views, auxiliary constructions and all six equations from COBOT Figure 18, p. 31. MathML provides proper notation, and phone-specific SVGs stack the views with readable labels. The source expression `b = tan(c/a)` and angle conventions are reproduced literally; no undocumented mathematical correction was made. The caption follows §6.7.4 pp. 31–32: analytic joint targets precede MoveIt trajectory planning. All four replacements were visually compared beside their source figures.
+The Cobot figure now retains the articulated geometry, top/side views, auxiliary constructions and all six equations from COBOT Figure 18, p. 31. MathML provides proper notation, and phone-specific SVGs stack the views with readable labels. That initial reconstruction reproduced `b = tan(c/a)` literally. The later implementation check below supersedes the report equations with the verified arm-service calculations. The caption follows §6.7.4 pp. 31–32: analytic joint targets precede MoveIt trajectory planning. All four replacements were visually compared beside their source figures.
 
 
 ### English ROS 2 implementation flowcharts
@@ -173,3 +173,14 @@ Original HEIC files remain available as sources. The four photos were appended t
 The audio overview now uses both of the homepage images (Furhat and microphone mount CAD), with the same 31% / 51% paired composition. The shared harvesting document retains its 1000 × 540 layout, but its camera image increases from 340 to 400 units wide and its rover from 560 to 680 units wide. Both assets stay intact; the screenshot’s rounded clipping path remains. The refreshed PNG and PDF links include cache hashes.
 
 Furpack prototype photos follow the user's requested old-index order: 4, 5, 6, 2, 7, 1, 3. Project descriptions now describe the author's work directly, using I / we where appropriate, without paper/report attribution or visible paper citations. Internal provenance stays in these notes. Measurements, equations, data and experimental limitations remain.
+
+
+## Copy refinement and implementation checks — 07/10/2026
+
+The displayed IK equations now follow `Semester 5/SIR/lss-ros-kinect/src/arm_controller/arm_controller/arm_service.py`, `calc_target_angle`, lines 86–119, read directly from the local project. Figure 18 of the report (p. 31) contains `b = tan(c/a)` and a shoulder `atan(c/b)` term; the implementation instead uses `b = sqrt(a*a + c*c)` and `atan2(c,a)`. Base and wrist use `atan2` rather than one-argument `atan`. Each inverse-trigonometric result is converted to degrees; the command includes a +5° base offset. The standalone coordinate-calculation draft has an extra elbow offset that is absent from the arm service, so it was not used as the authority. No project code was copied into the repository or executed.
+
+HARVEST pp. 6–8 explicitly names an F-test, including the failure-rate section on p. 7. This verifies the historical label, not the suitability of the statistical model. The public technical notes retain F-test and distinguish the unavailable trial-level validation; no Fisher test, new p-values or recalculation is introduced.
+
+The audio thesis is already linked from the homepage at `assets/site/certificates/anton-kuehr-bachelors-thesis.pdf`; the project page now links the same existing file. The nine-week duration and 03/2026 submission are verified by the thesis, while employment and portfolio periods remain separate. Furpack status and its PDF caption now describe manufacturing handover rather than a production launch or final manufactured design.
+
+Thesis §2.2.5 explicitly dates the conducted work to 2 February–30 March 2026; public formal months use 02/2026 – 03/2026, separately from project preparation and employment. Appendix A schedules discovery in Nov 2025–Jan 2026 and starts W1 on 26 January; the main text takes precedence for formal months. The documented 360° prototype is dated 05/2025 in the deck/report; both homepage and case study now use the same documented build period pending any author clarification about later activity.

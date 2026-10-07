@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=36" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=39" />
     <script src="assets/js/site.js?v=7" defer></script>
   </head>
   <body class="project-page">
@@ -66,17 +66,17 @@
         <p class="project-lead">A layered textile contact sensor, followed by a separate humanoid-skin investigation.</p>
 
         <dl class="project-facts">
-        <div><dt>Period</dt><dd>BSc: 09/2024 – 03/2025; Echo: 09/2026 – present</dd></div>
+        <div><dt>Project period</dt><dd>BSc: 09/2024 – 03/2025; Echo: 09/2026 – present</dd></div>
         <div><dt>Context</dt><dd>Product Engineering II, TH Köln; Project Echo, TU Delft</dd></div>
         <div><dt>Status</dt><dd>BSc feasibility study completed; Echo investigation ongoing</dd></div>
-        <div><dt>My contribution</dt><dd>Joint BSc development with Fabio Jain; Skin Team Lead at Echo</dd></div></dl>
+        <div><dt>My contribution</dt><dd>Collaborative BSc sensor development; skin-team leadership at Echo</dd></div></dl>
         <p class="project-collaborators">
             <span>In collaboration with:</span>
             <a href="https://www.linkedin.com/in/fabio-jain-947705179/" target="_blank" rel="noopener">Fabio Jain ↗</a>
           </p>
 
         <div class="project-overview">
-        <p class="project-result"><strong>64 sensing locations and two active pressure levels</strong>, demonstrated in a flexible BSc contact-matrix prototype.</p>
+        <p class="project-result"><strong>64 sensing locations and two discrete activation thresholds</strong>, demonstrated in a flexible BSc contact-matrix prototype.</p>
         <div class="case-media-grid">
 <figure class="case-figure"><a class="figure-media" href="assets/projects/robotic-skin/robotic-skin-tactile-prototype-and-touch-display.png" target="_blank" rel="noopener" aria-label="Open full-size image: BSc tactile-sensor prototype and touch display"><img src="assets/projects/robotic-skin/robotic-skin-tactile-prototype-and-touch-display.png" alt="BSc tactile-sensor prototype and touch display" width="2502" height="1682" fetchpriority="high" decoding="async" /></a>
         <figcaption>The BSc prototype in touch-localisation testing. <a class="figure-full" href="assets/projects/robotic-skin/robotic-skin-tactile-prototype-and-touch-display.png" target="_blank" rel="noopener">Full size ↗</a></figcaption></figure>
@@ -93,7 +93,7 @@
         <div class="case-copy">
         <h2>A contact matrix with two triggering thresholds</h2>
         <p>Perpendicular conductive tracks form an 8 × 8 matrix. At rest, perforated elastic separators hold the sender and receiver tracks apart. A press compresses a separator until tracks touch through its openings. An Arduino activates each sender track in turn and reads the receivers; the connected pair identifies a sensing location.</p>
-        <p>One sender layer, two receiver layers and two separators provide two active pressure levels plus no contact. These are discrete contact thresholds. The prototype does not continuously measure force.</p></div>
+        <p>One sender layer, two receiver layers and two separators provide two discrete activation thresholds, plus a no-contact state. The prototype does not continuously measure force.</p></div>
         <div class="case-media-grid">
 <figure class="case-figure"><a class="figure-media" href="assets/projects/robotic-skin/robotic-skin-layered-sensor-diagram.png" target="_blank" rel="noopener" aria-label="Open full-size image: Layered sensor schematic with one sender, two receivers, separators and protective covers"><img src="assets/projects/robotic-skin/robotic-skin-layered-sensor-diagram.png" alt="Layered sensor schematic with one sender, two receivers, separators and protective covers" width="2016" height="1232" loading="lazy" decoding="async" /></a>
         <figcaption>The two receiver layers provide different contact thresholds; the covers are protective layers. <a class="figure-full" href="assets/projects/robotic-skin/robotic-skin-layered-sensor-diagram.png" target="_blank" rel="noopener">Full size ↗</a></figcaption></figure>
@@ -110,14 +110,14 @@
         <section id="results" class="case-section case-section--results">
         <div class="case-copy">
         <h2>Results and limitations</h2>
-        <p>The prototype detected contact locations across 64 sensing cells, with several cells responding under a larger contact area. In five threshold tests per configuration, averaged using a rounded 16 mm test cube, increasing separator fill density and thickness from 2 to 3 mm raised the activation pressure. It remained functional when wrapped around a 100 mm-diameter cylinder, with no measurable change in that test.</p>
+        <p>The prototype detected contact locations across 64 sensing cells, with several cells responding under a larger contact area. In five threshold tests per configuration, averaged using a 16 mm test cube with rounded edges, increasing separator fill density and thickness from 2 to 3 mm raised the activation pressure. It remained functional when wrapped around a 100 mm-diameter cylinder, with no measurable change in activation behaviour in that test.</p>
         <p>The 8 mm value is track pitch, rather than a validated localisation error. Precise triggering accuracy was not established. The stack was more than 1 cm thick, wiring became burdensome at larger scales, and material deformation produced measurement errors up to 10%. Maximum bending, long-term durability and whole-body coverage remained untested.</p></div>
         </section>
 <details class="technical-notes">
         <summary>Sensor construction and evaluation<span class="chevron" aria-hidden="true"></span></summary>
         <div class="technical-content">
         <div class="case-copy">
-        <p>SN74HC595 output registers activate one sender track at a time; SN74HC165 input registers serialise receiver states. Pull-down resistors and output-protection diodes support the readout. Serial scanning limits scaling, and no measured frame rate or general ghost-free multi-touch result was established.</p>
+        <p>SN74HC595 output registers activate one sender track at a time; SN74HC165 input registers serialise receiver states. Pull-down resistors and output-protection diodes support the readout. Serial scanning limits scaling. We did not measure frame rate or establish ghost-free multi-touch performance.</p>
         <p>Our prototype material costs were below €10. This excludes an installed-system price or labour estimate. The investigated activation-pressure range was approximately 10–100 Pa, with threshold measurements rounded because of measurement uncertainty. A third active pressure level was reserved in the communication protocol for future extension.</p></div></div></details>
         <section id="project-echo" class="case-section case-section--support">
         <div class="case-copy">
@@ -125,7 +125,7 @@
         <p class="case-period">09/2026 – present · TU Delft · Ongoing investigation</p>
         <p>I am Skin Team Lead for <a class="text-link" href="https://www.instagram.com/project_echo_delft/" target="_blank" rel="noopener">RSA Project Echo ↗</a>. Our stated goals are scalable touch localisation, approximate force sensing and a protective soft outer layer for a humanoid, with the wider project aiming towards RoboCup Rescue 2028. These are investigation goals; the BSc measurements above do not establish Echo performance.</p></div>
         <div class="case-media-grid">
-<figure class="case-figure"><a class="figure-media" href="assets/projects/robotic-skin/rsa-project-echo-humanoid-platform.png" target="_blank" rel="noopener" aria-label="Open full-size image: Existing Project Echo humanoid-platform image"><img src="assets/projects/robotic-skin/rsa-project-echo-humanoid-platform.png" alt="Existing Project Echo humanoid-platform image" width="803" height="768" loading="lazy" decoding="async" /></a>
+<figure class="case-figure"><a class="figure-media" href="assets/projects/robotic-skin/rsa-project-echo-humanoid-platform.png" target="_blank" rel="noopener" aria-label="Open full-size image: Project Echo humanoid platform"><img src="assets/projects/robotic-skin/rsa-project-echo-humanoid-platform.png" alt="Project Echo humanoid platform" width="803" height="768" loading="lazy" decoding="async" /></a>
         <figcaption>The humanoid platform motivating Project Echo’s separate skin investigation. <a class="figure-full" href="assets/projects/robotic-skin/rsa-project-echo-humanoid-platform.png" target="_blank" rel="noopener">Full size ↗</a></figcaption></figure>
 </div></section>
 

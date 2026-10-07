@@ -145,3 +145,18 @@ Safari audit passed 12/12 checks for home, audio, Furpack and harvesting at 1440
 - Visually reviewed desktop sensing/hardware layouts and actual 390 px project-page layouts for sensing and IK.
 - Exact pre/post comparison preserved all MathML equations, UML process/decision text, connections, merges, loops and terminals, and the harvesting result figure/data.
 - Hardware supply paths are separated from signal lanes; camera target fields and ribbon-cable detail remain in adjacent page text.
+
+
+## Portfolio follow-ups — 07/10/2026
+
+- Safari layout checks passed for index, cobot, harvesting and Furpack at 1440, 390 and 320 CSS px, with disclosures opened (12/12).
+- Restored organisation images decode successfully. All technical SVG labels fit their canvases; reviewed compact logo placement and the coloured IK coordinate inset on the actual 390 px page layout.
+- Furpack bottom navigation is outside all disclosures; HTML disclosure nesting is balanced.
+- Hardware signal and power figures now have separate desktop/mobile SVG assets. Component pictograms follow the original camera, boards, rover, arm, motor, encoder, fan and battery illustrations.
+- Missing saved organisation logos: Gymnasium Kreuzgasse, Lern-Fair, Enactus Köln, Dachzeltnomaden, Senioren Herz Jesu and City of Cologne.
+
+
+07/10/2026 logo and IK layout follow-up: Safari checks passed for index, cobot, harvesting robot and Furpack at 1440, 390 and 320 CSS px, with disclosures expanded. All organisation logos decoded; SVG text remained within each canvas. IK views use separate sage frames; side-view axes moved to the top right without reversing the coordinate convention. Phone checks use Safari iframe widths, not physical iOS hardware.
+
+
+07/10/2026 copy refinement: all seven content pages passed Safari layout checks at 1440, 390 and 320 CSS px (21 combinations), including expanded disclosures. Verified local resource destinations, uniform project fact labels, date separators and MathML parsing. Visually reviewed the implementation-verified IK equations in the phone layout. Source checks used the local arm service, Cobot report Figure 18, harvesting methodology/results and audio thesis schedule. Existing structure and media retained; tutor disclosure removed because it repeated the summary.

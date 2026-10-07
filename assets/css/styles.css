@@ -2160,3 +2160,20 @@ html:not(.js) .cv-close {
   .ik-equations .ik-mapping { margin-bottom: 28px; }
   .ik-equations dl { gap: 24px; }
 }
+
+/* Compact organisation marks preserve the date/title grid. */
+.about-languages p { line-height: 1.7; }
+
+/* Separate geometry views and prominent organisation identities. */
+.ik-geometry-panels { gap: 20px; padding: 0; background: transparent; }
+.ik-geometry-panels > .diagram-frame { display: grid; align-items: center; padding: 16px; }
+.cv-main--logo { position: relative; padding-left: 88px; min-height: 68px; }
+.cv-logo { position: absolute; left: 0; top: 1px; width: 68px; height: 68px; object-fit: contain; padding: 6px; background: #f1f8f4; border-radius: 8px; }
+@media (max-width: 700px) {
+ .ik-geometry-panels { gap: 16px; padding: 0; }
+ .cv-main--logo { padding-left: 70px; min-height: 54px; }
+ .cv-logo { width: 54px; height: 54px; padding: 4px; }
+}
+
+/* Keep navigation labels in sentence case. */
+#site-nav a { text-transform: none; }

@@ -6,7 +6,7 @@
     <title>Furhat’s audio system — Anton Kühr</title>
     <meta
       name="description"
-      content="A constrained mechanical microphone redesign evaluated through transcript-level speech recognition."
+      content="Redesigning Furhat’s microphone integration and measuring its effect on speech recognition."
     />
     <meta name="author" content="Anton Kühr" />
     <meta name="theme-color" content="#071c17" />
@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=36" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=39" />
     <script src="assets/js/site.js?v=7" defer></script>
   </head>
   <body class="project-page">
@@ -63,7 +63,7 @@
             <a href="robotic-skin.html"><span>← Previous project</span>Robotic skin development</a><a href="furpack.html"><span>Next project →</span>The Furpack</a>
           </nav>
         <h1>Furhat’s audio system</h1>
-        <p class="project-lead">A constrained mechanical microphone redesign evaluated through transcript-level speech recognition.</p>
+        <p class="project-lead">Redesigning Furhat’s microphone integration and measuring its effect on speech recognition.</p>
 
         <dl class="project-facts">
         <div><dt>Project period</dt><dd>11/2025 – 03/2026</dd></div>
@@ -84,7 +84,7 @@
         <div class="case-copy">
         <h2>Context and my role</h2>
         <p>For my nine-week bachelor’s thesis at Furhat Robotics, I investigated whether mechanical changes could improve recognition without changing the microphone PCB, system connection, moulded shell or external sound ports. I carried out the literature review, expert consultation, mechanical design, prototyping, automated testing and statistical analysis.</p>
-        <p>The internal recording interface was mono, so I developed and tested one side. The broader project ran from 11/2025 to 03/2026, including nine weeks of thesis work.</p></div></section>
+        <p>The internal recording interface was mono, so I developed and tested one side. The project period (11/2025 – 03/2026) includes preparation before the formal nine-week thesis period (02/2026 – 03/2026), with submission in 03/2026. The broader thesis-related employment phase was 10/2025 – 04/2026.</p><p><a class="text-link" href="assets/site/certificates/anton-kuehr-bachelors-thesis.pdf" target="_blank" rel="noopener">Read the thesis ↗</a></p></div></section>
         <section id="implementation" class="case-section case-section--figure">
         <div class="case-copy">
         <h2>Define the sound path and attach the mount to the shell</h2>
@@ -124,7 +124,7 @@
         <tr><td>5 dB</td><td>18.8%</td><td>17.8%</td></tr>
         <tr><td>All four conditions</td><td>18.3%</td><td>16.6%</td></tr></tbody></table></div>
         <p>The changes were evaluated together, so their separate causal effects were not established. One room, one speech recording and a limited set of conditions constrain transferability. The test measured transcript errors rather than real conversational success.</p>
-        <p>ReSpeaker yielded mean WER of 9.5% at SNR 5, with only 60 usable runs and none in the other conditions. It was approximately 30 cm closer to the source and used a different signal chain, limiting any comparison of mounting geometry. I did not evaluate production adoption.</p></div></section>
+        <p>ReSpeaker yielded mean WER of 9.5% at SNR 5, with only 60 usable runs and none in the other conditions. It was approximately 30 cm closer to the source and used a different signal chain, limiting any comparison of mounting geometry. Production adoption was outside the scope of the thesis.</p></div></section>
         <details class="technical-notes">
         <summary>Statistical methods and incomplete reference data<span class="chevron" aria-hidden="true"></span></summary>
         <div class="technical-content">
