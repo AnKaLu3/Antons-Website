@@ -17,10 +17,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=39" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=55" />
     <script src="assets/js/site.js?v=7" defer></script>
   </head>
   <body class="project-page">
@@ -30,7 +30,7 @@
 
         <div class="container header-inner">
         <a class="wordmark" href="index.html" aria-label="Anton Kühr home"
-          >Anton Kühr</a
+          >Anton Kühr.</a
         ><button
           class="menu-button"
           aria-expanded="false"
@@ -91,14 +91,14 @@
         <div class="case-copy">
         <h2>Replace scanning while retaining the robot platform</h2>
         <p>The first version detected targets with a servo-swept time-of-flight (ToF) scanner. The second used camera-based detection on a Raspberry Pi 5, while the rover, arm and gripper remained largely unchanged. The camera screenshot above shows the targets identified in the image.</p></div>
-        <figure class="technical-figure"><h3 class="figure-title">Two sensing systems on the same robot platform</h3><div class="technical-graphic diagram-frame"><picture><source media="(max-width: 700px)" srcset="assets/projects/harvesting-robot/harvesting-robot-sensing-system-comparison-mobile.svg?v=39" /><img src="assets/projects/harvesting-robot/harvesting-robot-sensing-system-comparison.svg?v=39" alt="Comparative sensing schematic: camera and ToF paths converge on the same Arduino and rover, with servo-sweep control and encoder feedback." width="1040" height="485" loading="lazy" decoding="async" /></picture></div><figcaption>Both sensing methods feed the same controller, rover, arm and gripper. Camera target data contains class, confidence, image size, x/y coordinates and colour; front-wheel encoders provide feedback.</figcaption><p class="figure-download"><a class="figure-full" href="assets/projects/harvesting-robot/harvesting-robot-sensing-system-comparison.svg?v=39" target="_blank" rel="noopener">Full size ↗</a></p></figure>
+        <figure class="technical-figure"><h3 class="figure-title">Two sensing systems on the same robot platform</h3><div class="technical-graphic diagram-frame"><picture><source media="(max-width: 700px)" srcset="assets/projects/harvesting-robot/harvesting-robot-sensing-system-comparison-mobile.svg?v=47" /><img src="assets/projects/harvesting-robot/harvesting-robot-sensing-system-comparison.svg?v=47" alt="Comparative sensing schematic: camera and ToF paths converge on the same Arduino and rover, with servo-sweep control and encoder feedback." width="1040" height="485" loading="lazy" decoding="async" /></picture></div><figcaption>Both sensing methods feed the same controller, rover, arm and gripper. Camera target data contains class, confidence, image size, x/y coordinates and colour; front-wheel encoders provide feedback.</figcaption><p class="figure-download"><a class="figure-full" href="assets/projects/harvesting-robot/harvesting-robot-sensing-system-comparison.svg?v=47" target="_blank" rel="noopener">Full size ↗</a></p></figure>
         </section>
         <section id="architecture" class="case-section case-section--figure">
         <div class="case-copy">
         <h2>Keep perception separate from actuator control</h2>
         <p>The camera pipeline provided target detections for the harvesting behaviour. An Arduino Mega 2560 handled heading, distance and actuator control. Keeping downstream behaviour comparable helped focus the experiment on the perception change.</p>
         <p>The camera connects to the Raspberry Pi through a ribbon cable. The diagram separates information flow from the 12 V and 5 V power supplies. </p></div>
-        <figure class="technical-figure"><h3 class="figure-title">Hardware and information architecture</h3><div class="technical-graphic diagram-frame"><picture><source media="(max-width: 700px)" srcset="assets/projects/harvesting-robot/harvesting-robot-signal-architecture-mobile.svg?v=39" /><img src="assets/projects/harvesting-robot/harvesting-robot-signal-architecture.svg?v=39" alt="Hardware and information architecture: original component relationships retained with compact hardware pictograms." width="1100" height="610" loading="lazy" decoding="async" /></picture></div><figcaption>Perception, control and actuation: image and serial data, motor and servo PWM, fan control and encoder feedback.</figcaption><p class="figure-download"><a href="assets/projects/harvesting-robot/harvesting-robot-signal-architecture.svg?v=39" target="_blank" rel="noopener">Full size ↗</a></p></figure><figure class="technical-figure"><h3 class="figure-title">Power distribution</h3><div class="technical-graphic diagram-frame"><picture><source media="(max-width: 700px)" srcset="assets/projects/harvesting-robot/harvesting-robot-power-distribution-mobile.svg?v=39" /><img src="assets/projects/harvesting-robot/harvesting-robot-power-distribution.svg?v=39" alt="Power distribution: original component relationships retained with compact hardware pictograms." width="1100" height="420" loading="lazy" decoding="async" /></picture></div><figcaption>The 4000 mAh battery supplies the 12 V motor path and 5 V converter. Each physical supply and load is shown; the LiPo warning threshold is 11.4 V.</figcaption><p class="figure-download"><a href="assets/projects/harvesting-robot/harvesting-robot-power-distribution.svg?v=39" target="_blank" rel="noopener">Full size ↗</a></p></figure>
+        <figure class="technical-figure"><h3 class="figure-title">Hardware and information architecture</h3><div class="technical-graphic diagram-frame"><picture><source media="(max-width: 700px)" srcset="assets/projects/harvesting-robot/harvesting-robot-signal-architecture-mobile.svg?v=47" /><img src="assets/projects/harvesting-robot/harvesting-robot-signal-architecture.svg?v=47" alt="Hardware and information architecture: original component relationships retained with compact hardware pictograms." width="1100" height="610" loading="lazy" decoding="async" /></picture></div><figcaption>Perception, control and actuation: image and serial data, motor and servo PWM, fan control and encoder feedback.</figcaption><p class="figure-download"><a href="assets/projects/harvesting-robot/harvesting-robot-signal-architecture.svg?v=47" target="_blank" rel="noopener">Full size ↗</a></p></figure><figure class="technical-figure"><h3 class="figure-title">Power distribution</h3><div class="technical-graphic diagram-frame"><picture><source media="(max-width: 700px)" srcset="assets/projects/harvesting-robot/harvesting-robot-power-distribution-mobile.svg?v=47" /><img src="assets/projects/harvesting-robot/harvesting-robot-power-distribution.svg?v=47" alt="Power distribution: original component relationships retained with compact hardware pictograms." width="1100" height="420" loading="lazy" decoding="async" /></picture></div><figcaption>The 4000 mAh battery supplies the 12 V motor path and 5 V converter. Each physical supply and load is shown; the LiPo warning threshold is 11.4 V.</figcaption><p class="figure-download"><a href="assets/projects/harvesting-robot/harvesting-robot-power-distribution.svg?v=47" target="_blank" rel="noopener">Full size ↗</a></p></figure>
         </section>
         <section id="results" class="case-section case-section--results">
         <div class="case-copy">

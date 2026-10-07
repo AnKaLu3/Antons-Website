@@ -160,3 +160,6 @@ Safari audit passed 12/12 checks for home, audio, Furpack and harvesting at 1440
 
 
 07/10/2026 copy refinement: all seven content pages passed Safari layout checks at 1440, 390 and 320 CSS px (21 combinations), including expanded disclosures. Verified local resource destinations, uniform project fact labels, date separators and MathML parsing. Visually reviewed the implementation-verified IK equations in the phone layout. Source checks used the local arm service, Cobot report Figure 18, harvesting methodology/results and audio thesis schedule. Existing structure and media retained; tutor disclosure removed because it repeated the summary.
+
+
+Typography review (08/10/2026): consolidated the site into supporting text (14 px), body/navigation (16 px), item headings/wordmark (20 px), section headings (24 px), and responsive page titles (32–48 px). Space Grotesk is reserved for headings/identity; Inter for reading and controls. CSS parsing, local asset references and whitespace checks passed. Safari visual review was interrupted by concurrent browser use and was not completed.
