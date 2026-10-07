@@ -9,6 +9,7 @@ Reviewed 7 October 2026 against the repository's existing working copy and the s
 | SKIN | `Paper_Taktile_Sensorik_für_kollaborative_Robotik.pdf`, Fabio Elias Jain and Anton Kuehr, *Machbarkeitsstudie zur grossflaechigen taktilen Wahrnehmung in Robotersystemen* | Eight-page paper; mechanism, construction, evaluation and limitations. Printed page = PDF page. Figures on pp. 2, 6 and 8 visually inspected. |
 | AUDIO | `Bachelor's Thesis Anton Kuehr (print).pdf`, Anton Karl Ludwig Kuehr, *Investigation of the Influence of Mechanical Microphone Implementation on ASR Performance*, submitted 27 March 2026 | Chapters 5–10 and evaluation tables; original/final implementation and test figures visually inspected. Main-text PDF page = printed page + 10. |
 | COBOT | `SIR Abschlussbericht 2025 - Jain, Kühr, Lübken, Sondenheimer, Tolkovets.pdf`, *Kollaboratives Arbeiten - Greifarm und Mensch*, submitted 26 February 2025 | Chapters 4–8, especially implementation, subsystem tests and conclusion. Workflow and IK figures on pp. 27, 29 and 31 visually inspected. Printed page = PDF page. |
+| HARVEST | `Abgabe Consolidation Paper Objekterkennung-Kühr,Tolkovets.pdf`, Anton Kühr and Denis Tolkovets, *Time-of-Flight oder Computer Vision für die Objekterkennung?*, 7 October 2024; located under `/Users/antonkuhr/Documents/Bachelor/Semester 4/Projekt/` | Complete ten-page paper. Figures 1–3 on pp. 3, 5 and 7 rendered and visually reviewed; sensing, hardware, training and evaluation text checked. |
 | EXISTING | HTML, CSS, JavaScript and media in the current repository at the start of this task | Dates, CV entries and evidence destinations, collaborator names/links, Project Echo role/goals, harvesting claims, authorised existing demo entry points and image treatments. Retention is not independent factual verification. |
 
 FURPACK root: `/Users/antonkuhr/Documents/Arbeit/Furhat/Furpack/`.
@@ -96,19 +97,23 @@ ROTATION root: `/Users/antonkuhr/Documents/Arbeit/Furhat/360 Rotation/`.
 
 ## Harvesting robot: `harvesting-robot.html`
 
-All dates, personal detector/deployment claims, hardware names, 2,445 images, 18 target positions, 50.9/2.8 s/m, 40%/0% failures, Welch/Fisher test names and existing figures/demo are based on EXISTING. No harvesting report was supplied or located in the focused source review. The architecture was moved before evaluation; figures retain their original German labels and data. Camera detections inform harvesting behaviour only at the high level established by the existing record. The approximately 18 ratio is explicitly retrieval time per metre; unresolved definitions/counts and attribution are recorded in CONTENT_GAPS.md.
+HARVEST now verifies the common rover/Grab-it arm platform, servo-swept VL53L1X and camera/Pi 5/YOLOv8n paths, 2,445 training images, connected hardware and evaluation definitions. Existing dates and individual contribution wording are preserved; the coauthored paper does not allocate subsystem ownership.
+
+The sensing redraw follows Figure 1 (p. 3), and the hardware redraw follows Figure 2 (p. 5): image/serial/PWM control, encoder returns, 12 V battery and motor supply, converter and 5 V distribution remain connected. Desktop and phone SVGs use translated labels and simplified component illustrations. Figure 3 (p. 7) supplies all 36 timing cells, 12 rounded row means and both overall means; accessible HTML tables share a continuous palette-based scale. This is an editorial redraw, not new experimental evidence.
+
+HARVEST pp. 6–8 defines the 18-position indoor comparison, timing from motion start to the start of grasping, and 12 failures in 30 ToF attempts versus none in 18 camera attempts. Failed detection/collision attempts were repeated; grasp failures retained the approach time. Public test names now follow the paper's t-test and F-test wording, replacing the prior unverified Welch/Fisher labels without reanalysing the statistics. The approximately 18 ratio remains retrieval time per metre, not physical driving speed. Trial-level data and detailed statistical outputs remain unavailable here.
 
 ## Media provenance and publication status
 
-Existing project/card assets and authorised demo destinations were retained. Technical figures retain intrinsic aspect ratios, neutral backing where useful and accessible full-size links. No generated technical evidence, inverted CAD, recoloured data or replacement plots were introduced.
+Existing project/card assets and authorised demo destinations were retained. Technical figures retain intrinsic aspect ratios, neutral backing where useful and accessible full-size links. No new experimental evidence or inverted CAD was introduced. The later technical-figure revision replaces the earlier simplified redraws with source-based SVG geometry/schematics and a shared-colour HTML heatmap; the original raster figures remain supporting documentation assets.
 
 Four proposed source excerpts were extracted as original embedded raster data without resizing, cropping or redrawing:
 
 | New local file | Source location |
 |---|---|
-| `assets/projects/furhat-audio/original-microphone.png` | AUDIO original PCB/foam image, PDF p. 40 / printed p. 30, image `Im30`. |
-| `assets/projects/furhat-audio/redesigned-assembly.jpg` | AUDIO final assembly Figure 7.7(d), PDF p. 55 / printed p. 45, `Im62`. |
-| `assets/projects/furhat-audio/test-setup.jpg` | AUDIO Figure 8.3, PDF p. 65 / printed p. 55, `Im67`. |
+| `assets/projects/furhat-audio/furhat-audio-original-microphone-pcb-and-foam.png` | AUDIO original PCB/foam image, PDF p. 40 / printed p. 30, image `Im30`. |
+| `assets/projects/furhat-audio/furhat-audio-redesigned-microphone-assembly.jpg` | AUDIO final assembly Figure 7.7(d), PDF p. 55 / printed p. 45, `Im62`. |
+| `assets/projects/furhat-audio/furhat-audio-speech-and-noise-test-setup.jpg` | AUDIO Figure 8.3, PDF p. 65 / printed p. 55, `Im67`. |
 | `assets/projects/voice-cobot/ik-geometry.png` | COBOT Figure 18, p. 31, `Im25`. German source labels preserved. |
 
 Selected supplied files remain in `akrobotics-project-assets/`:
@@ -124,10 +129,14 @@ Selected supplied files remain in `akrobotics-project-assets/`:
 | `furhat-360-belt-concept.png`, `furhat-360-wheel-concept.png` | ROT-REPORT `image21.png`, `image8.png`. Alternative concept sketches. |
 | `furhat-360-control-flow.png`, `furhat-360-electronics.png`, `furhat-360-bearing-and-belt.jpg` | ROT-REPORT `image25.png`, `image11.png`, `image18.jpg`. Original control/electrical diagrams and built detail. |
 
-The 360 case study also retains the existing portrait exploded CAD asset `assets/projects/furhat-360/new/final-exploded.png`; no new crop was made. Unused supplied photographs remain available for review rather than being turned into a gallery.
+The 360 case study also retains the existing portrait exploded CAD asset `assets/projects/furhat-360/furhat-360-rotation-drive-exploded-cad.png`; no new crop was made. Unused supplied photographs remain available for review rather than being turned into a gallery.
 
 These new excerpts and supplied internal/supplier images are included for **local author review only**. Public-use permission remains an author decision. No entire source report, thesis, private correspondence, commercial workbook, supplier contact, invoice, codebase or internal Drive link was copied or newly linked. No deployment was performed.
 
 ## Narrow homepage copy corrections
 
 The portfolio grid, order and image wrappers were preserved. Five card summaries were adjusted: separate skin BSc/Echo work; define the audio gain as relative WER reduction; replace the Furpack typo/generic stage summary with documented deliverables; qualify the 360 mechanism by cable/integration limits; specify harvesting retrieval time per metre instead of physical speed. The Furhat job detail uses the same properly scoped audio WER result. All other protected homepage markup remains the original working-copy content.
+
+## Technical-figure revision — 7 October 2026
+
+The Cobot figure now retains the articulated geometry, top/side views, auxiliary constructions and all six equations from COBOT Figure 18, p. 31. MathML provides proper notation, and phone-specific SVGs stack the views with readable labels. The source expression `b = tan(c/a)` and angle conventions are reproduced literally; no undocumented mathematical correction was made. The caption follows §6.7.4 pp. 31–32: analytic joint targets precede MoveIt trajectory planning. All four replacements were visually compared beside their source figures.

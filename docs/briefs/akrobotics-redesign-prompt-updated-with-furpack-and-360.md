@@ -4,14 +4,14 @@ Version 2: expanded using the three supplied project papers.
 
 ## Task and scope
 
-Refine Anton Kuehr's existing robotics portfolio at https://antonkuehr.github.io/akrobotics/ rather than giving it a new identity. Work in the actual current repository and inspect its HTML, styles.css, site.js, and existing assets first. Public search/extracted page text may show older versions; do not replace newer repository content with an older cached version.
+Refine Anton Kuehr's existing robotics portfolio at https://antonkuehr.github.io/akrobotics/ rather than giving it a new identity. Work in the actual current repository and inspect its HTML, assets/css/styles.css, assets/js/site.js, and existing assets first. Public search/extracted page text may show older versions; do not replace newer repository content with an older cached version.
 
 The two problems to solve are:
 
 1. Education, Jobs, and Volunteering use visually heavy cards with inefficient information layout.
 2. The six project pages need a consistent reading structure, clearer evidence and personal attribution, and less repetitive, generic writing.
 
-Relevant files are index.html, robotic-skin.html, furhat-audio.html, furpack.html, furhat-360.html, cobot.html, harvesting-robot.html, styles.css, and site.js.
+Relevant files are index.html, robotic-skin.html, furhat-audio.html, furpack.html, furhat-360.html, cobot.html, harvesting-robot.html, assets/css/styles.css, and assets/js/site.js.
 
 Keep the current navigation, home-page section order and anchors, hero, About section, portfolio overview/grid, project order, Skills layout, Contact area, and previous/next project navigation. Preserve current image treatments on the home-page project cards. Source-supported corrections to project-card summaries are allowed, but not a redesign of the grid. These are protected areas, apart from small, explicitly identified copy corrections and fixes required to avoid regressions. Do not redesign the whole site, migrate frameworks, introduce a build system, add a CMS, or deploy changes without a separate instruction.
 
@@ -333,11 +333,11 @@ Use approximately three visual groups: an actual supplier sample near the overvi
 
 Two selected previews for the implementation prompt:
 
-![Furhat inside an open supplier sample of Furpack.](akrobotics-project-assets/furpack-supplier-sample-open.png)
+![Furhat inside an open supplier sample of Furpack.](../../assets/projects/furpack/furpack-supplier-sample-open.png)
 
 Supplier sample from PACK-HANDOVER's development stage; original photograph supplied in the draft sample PDF listed above. Its existence does not establish production.
 
-![Second-iteration Furpack sketch showing the backpack form, handle, laptop compartment and fastening concepts.](akrobotics-project-assets/furpack-second-iteration-sketch.jpg)
+![Second-iteration Furpack sketch showing the backpack form, handle, laptop compartment and fastening concepts.](../../assets/projects/furpack/furpack-second-iteration-sketch.jpg)
 
 Design sketch from PACK-ITER2. Caption proposed features as design intentions unless a corresponding sample demonstrates them.
 
@@ -411,11 +411,11 @@ Choose roughly three visual groups: the assembled mechanism or existing demo, th
 
 Two selected previews for the implementation prompt:
 
-![Built rotating-base mechanism inside the Furhat body, showing the toothed belt and offset motor.](akrobotics-project-assets/furhat-360-built-mechanism.png)
+![Built rotating-base mechanism inside the Furhat body, showing the toothed belt and offset motor.](../../assets/projects/furhat-360/furhat-360-built-mechanism.png)
 
 Actual assembled hardware from ROT-REPORT. Use this to connect the packaging decision to the built result.
 
-![Source control-state diagram showing initialisation, waiting for camera input, PID-based tracking and recentering.](akrobotics-project-assets/furhat-360-control-flow.png)
+![Source control-state diagram showing initialisation, waiting for camera input, PID-based tracking and recentering.](../../assets/projects/furhat-360/furhat-360-control-flow.png)
 
 Original diagram from ROT-REPORT. Its recentering state is documented, but the trigger and effect on cable management remain unspecified.
 
