@@ -111,3 +111,37 @@ Supersedes the simplified redraws documented above. Replaced the Cobot geometry 
 Rendered and reviewed COBOT Figure 18 (p. 31) and HARVEST Figures 1–3 (pp. 3, 5, 7), then compared all replacements beside their originals in Safari. Checked desktop and 320px phone visuals, including power/feedback routes, geometry, MathML and timing cells. Adjusted a mobile wrist/height label overlap and routed the rover/ball line away from desktop labels. Source equations, including the unusual printed b expression, remain literal.
 
 Safari responsive checks passed **10/10**: both pages at 1440, 1024, 768, 390 and 320 CSS pixels. No page, figure heading, equation or timing-table overflow; all images decoded. All six equations remained present at each width. A local audit verified all 36 timing cells, 12 row means and two overall means against the source, parsed all eight SVGs, and resolved all 217 local HTML file references. `git diff --check` passed. Removed the disposable review fixture and stopped the owned preview server after verification. No deployment performed.
+
+
+## ROS translations and portfolio layout refinements — 07/10/2026
+
+Translated all four source ROS 2 service diagrams to inline English SVG, preserving source process/decision/join counts and control paths. Desktop and phone variants retain every branch, assignment and loop. Safari checks at 1440, 1024, 768, 390 and 320 pixels found four visible diagrams at each width, no horizontal page overflow and no process text outside its node or SVG viewBox.
+
+Added the About me portfolio anchor and card hover/focus text colours; removed the bottom Demonstration resource links. Shared project facts now use a quiet background panel without horizontal rules. Harvesting camera and rover share a sage frame, with a smaller rounded screenshot and larger robot; the homepage uses the same screenshot. Furpack starts with the final design PDF preview, retaining the old supplier sample in Additional prototype evidence. Audio and 360 hero images use their homepage assets; the built 360 mechanism sits beside exploded CAD. BSc course context and contributions were updated as requested. Election months verified against Cologne’s official results publication.
+
+Safari responsive audit: 28/28 page-width combinations passed (seven pages at 1440, 768, 390 and 320 pixels), with no horizontal page overflow or failed image decodes. Visually reviewed desktop and phone harvesting layouts, Furpack final PDF preview and the homepage camera thumbnail. All local HTML media/link references resolve, and `git diff --check` passes. Phone checks use Safari at phone CSS widths rather than a physical iPhone. Disposable review fixtures removed after checks. No deployment performed.
+
+
+## Open project details and unified imagery — 07/10/2026
+
+Replaced the four-column project facts panel with an unboxed vertical definition list: aligned labels and values on desktop, stacked labels on phones, no horizontal rules or tinted panel. Unified the harvesting overview into one figure and one full-size PDF, reused on the homepage. Replaced the Furpack opaque preview with original transparent artwork extracted from the new four-page PDF; changed all final-design links to the new file with a cache hash. Added all four new photos to Prototype iteration photos; HEIC sources were converted to browser-compatible JPEGs.
+
+Safari audit passed 28/28 combinations (seven pages at 1440, 768, 390 and 320 CSS pixels), including the expanded Furpack gallery: no horizontal page overflow and every image decoded. Visually inspected the transparent Furpack hero, open project details layout, phone gallery and combined harvesting figure on both home and project pages. Rendered and reviewed the combined PDF; all local HTML references resolve and `git diff --check` passes. The owned preview tab/server and disposable fixture were removed afterward. No deployment performed.
+
+
+## Matching audio hero, enlarged harvesting unit and project voice — 07/10/2026
+
+Audio now pairs the same Furhat and CAD images as the homepage, with a compact 200 px phone frame. Enlarged the camera screenshot by 18% and rover by 21% within the unchanged shared harvesting document frame, refreshed the rendered preview, and added cache hashes to both asset links. Verified the seven Furpack gallery figures follow the requested prior-index order 4, 5, 6, 2, 7, 1, 3.
+
+Rewrote paper/report attribution as direct descriptions of the author's work across all six project pages, removed visible paper-source paragraphs while retaining full-size figure downloads, and preserved all quantitative data and experimental limitations.
+
+Safari audit passed 12/12 checks for home, audio, Furpack and harvesting at 1440, 390 and 320 CSS pixels: no horizontal page overflow and all images decoded. Visually inspected the enlarged PDF render, matching audio composition on desktop and phone, and the homepage harvesting unit. Verified gallery order and all local links; `git diff --check` passed. Removed the owned preview fixture and stopped the preview server. No deployment.
+
+
+## Technical figure refinement — 07/10/2026
+
+- Safari SVG geometry checks passed for labels within all diagram canvases and all eight ROS 2 activity/decision layouts, including individual text lines within diamonds.
+- Cobot and harvesting pages passed overflow checks at CSS viewport widths 1440, 768, 390 and 320 px with disclosures opened. Phone checks use Safari iframes, not physical iOS devices.
+- Visually reviewed desktop sensing/hardware layouts and actual 390 px project-page layouts for sensing and IK.
+- Exact pre/post comparison preserved all MathML equations, UML process/decision text, connections, merges, loops and terminals, and the harvesting result figure/data.
+- Hardware supply paths are separated from signal lanes; camera target fields and ribbon-cable detail remain in adjacent page text.

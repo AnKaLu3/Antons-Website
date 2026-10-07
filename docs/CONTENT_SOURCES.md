@@ -140,3 +140,36 @@ The portfolio grid, order and image wrappers were preserved. Five card summaries
 ## Technical-figure revision — 7 October 2026
 
 The Cobot figure now retains the articulated geometry, top/side views, auxiliary constructions and all six equations from COBOT Figure 18, p. 31. MathML provides proper notation, and phone-specific SVGs stack the views with readable labels. The source expression `b = tan(c/a)` and angle conventions are reproduced literally; no undocumented mathematical correction was made. The caption follows §6.7.4 pp. 31–32: analytic joint targets precede MoveIt trajectory planning. All four replacements were visually compared beside their source figures.
+
+
+### English ROS 2 implementation flowcharts
+
+The four original manager, speech, vision and arm service SVGs in `assets/projects/voice-cobot/` are translated into inline SVG in `cobot.html`, with separate desktop and phone arrangements. All source processes, decisions, branch conditions, variable assignments, joins and loops remain. Speech target names are translated to Hammer and Screwdriver.
+
+### Election months and final Furpack design
+
+Cologne’s [Wahlergebnisse 2004 bis 2022](https://www.stadt-koeln.de/mediaasset/content/pdf15/statistik-standardinformationen/wahlergebnisse_in_den_stadtteilen_2004_bis_2022.pdf), contents page, dates the municipal election to 13 September 2020 and the state election to 15 May 2022 (and municipal runoff to 27 September 2020). Volunteering months are therefore 09/2020 and 05/2022; the user's three instances of service remain as supplied.
+
+`furpack-final-design-preview.png` is a Poppler render of page 1 of the existing `furpack-final-design.pdf`, linked to the original PDF in the project overview. The previous supplier sample image is retained under Additional prototype evidence.
+
+
+### Unified project figures and new Furpack assets — 07/10/2026
+
+`autonomous-harvesting-robot-camera-and-rover.pdf` composes the existing camera screenshot and transparent rover PNG in one sage frame, with a rounded clipping path around the screenshot. Its rendered PNG is reused on the homepage and project overview, with one description and one full-size document link. Source images remain unchanged.
+
+The newly provided `Furhat Sample 2 [Finished Images].pdf` (four pages) is now named `furpack-final-design.pdf` and linked with a content hash to avoid an older PDF being cached. The transparent artwork and alpha masks embedded on page 1 were extracted intact using pypdf and composed in `furpack-final-design-preview.svg`; this replaces the opaque page render. No generated or retouched product imagery was used.
+
+New prototype-photo mapping (gallery order is provisional):
+- IMG_2060.HEIC → `furpack-paper-mockup-exterior.jpg` (macOS JPEG conversion)
+- IMG_2078.HEIC → `furpack-small-scale-paper-mockup.jpg` (macOS JPEG conversion)
+- IMG_2089.jpg → `furpack-sewn-prototype-closed.jpg` (renamed, unchanged bytes)
+- IMG_8169.jpeg → `furpack-modified-backpack-loading.jpeg` (renamed, unchanged bytes)
+
+Original HEIC files remain available as sources. The four photos were appended to the renamed Prototype iteration photos gallery, pending the user's ordering instructions.
+
+
+### Figure sizing, gallery order and project voice — 07/10/2026
+
+The audio overview now uses both of the homepage images (Furhat and microphone mount CAD), with the same 31% / 51% paired composition. The shared harvesting document retains its 1000 × 540 layout, but its camera image increases from 340 to 400 units wide and its rover from 560 to 680 units wide. Both assets stay intact; the screenshot’s rounded clipping path remains. The refreshed PNG and PDF links include cache hashes.
+
+Furpack prototype photos follow the user's requested old-index order: 4, 5, 6, 2, 7, 1, 3. Project descriptions now describe the author's work directly, using I / we where appropriate, without paper/report attribution or visible paper citations. Internal provenance stays in these notes. Measurements, equations, data and experimental limitations remain.

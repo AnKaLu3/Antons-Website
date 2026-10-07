@@ -20,7 +20,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="assets/css/styles.css?v=27" />
+    <link rel="stylesheet" href="assets/css/styles.css?v=36" />
     <script src="assets/js/site.js?v=7" defer></script>
   </head>
   <body class="project-page">
@@ -72,10 +72,9 @@
         <div><dt>My contribution</dt><dd>Mechanical design, prototyping, automated evaluation and statistical analysis</dd></div></dl>
 
         <div class="project-overview">
-        <p class="project-result"><strong>Mean word error rate: 18.3% → 16.6%</strong> across 480 paired runs. A reported 9.3% relative reduction under the tested conditions.</p>
+        <p class="project-result"><strong>Mean word error rate: 18.3% → 16.6%</strong> across 480 paired runs. A 9.3% relative reduction under the tested conditions.</p>
         <div class="case-media-grid">
-<figure class="case-figure"><a class="figure-media" href="assets/projects/furhat-audio/furhat-audio-redesigned-microphone-mount-cad.png" target="_blank" rel="noopener" aria-label="Open full-size image: CAD view of the redesigned microphone mounting"><img src="assets/projects/furhat-audio/furhat-audio-redesigned-microphone-mount-cad.png" alt="CAD view of the redesigned microphone mounting" width="731" height="536" fetchpriority="high" decoding="async" /></a>
-        <figcaption>CAD of the redesigned mechanical microphone implementation. <a class="figure-full" href="assets/projects/furhat-audio/furhat-audio-redesigned-microphone-mount-cad.png" target="_blank" rel="noopener">Full size ↗</a></figcaption></figure>
+<figure class="case-figure"><div class="figure-media audio-overview-media"><img class="furhat-card" src="assets/projects/furhat-audio/furhat-audio-robot-microphone-position.png?v=70ddf10f" alt="The Furhat social robot" width="821" height="1222" fetchpriority="high" decoding="async" /><img src="assets/projects/furhat-audio/furhat-audio-redesigned-microphone-mount-cad.png" alt="CAD model of the redesigned MEMS microphone implementation for the Furhat robot" width="731" height="536" fetchpriority="high" decoding="async" /></div><figcaption>Furhat alongside the redesigned microphone mount. <a class="figure-full" href="assets/projects/furhat-audio/furhat-audio-robot-microphone-position.png" target="_blank" rel="noopener">Furhat full size ↗</a> · <a class="figure-full" href="assets/projects/furhat-audio/furhat-audio-redesigned-microphone-mount-cad.png" target="_blank" rel="noopener">CAD full size ↗</a></figcaption></figure>
 </div></div>
       </div></header>
 
@@ -85,7 +84,7 @@
         <div class="case-copy">
         <h2>Context and my role</h2>
         <p>For my nine-week bachelor’s thesis at Furhat Robotics, I investigated whether mechanical changes could improve recognition without changing the microphone PCB, system connection, moulded shell or external sound ports. I carried out the literature review, expert consultation, mechanical design, prototyping, automated testing and statistical analysis.</p>
-        <p>The internal recording interface was mono, so I developed and tested one side. The website records the broader project period as 11/2025 to 03/2026; the thesis describes nine weeks of work.</p></div></section>
+        <p>The internal recording interface was mono, so I developed and tested one side. The broader project ran from 11/2025 to 03/2026, including nine weeks of thesis work.</p></div></section>
         <section id="implementation" class="case-section case-section--figure">
         <div class="case-copy">
         <h2>Define the sound path and attach the mount to the shell</h2>
@@ -113,9 +112,9 @@
         <section id="results" class="case-section case-section--results">
         <div class="case-copy">
         <h2>Results and limitations</h2>
-        <p>Mean word error rate (WER, lower is better) fell from 18.3% to 16.6%. This is 1.7 percentage points, or the thesis’s reported 9.3% relative reduction. Its one-sided paired t-tests reported an improvement at p &lt; 0.05 in all four conditions.</p>
+        <p>Mean word error rate (WER, lower is better) fell from 18.3% to 16.6%. This is 1.7 percentage points, or a 9.3% relative reduction. My one-sided paired t-tests showed an improvement at p &lt; 0.05 in all four conditions.</p>
         <div class="results-table-wrap">
-        <table class="results-table results-table--audio"><caption>Mean word error rate (lower is better). 120 paired runs per SNR condition; 480 overall. Values rounded in the thesis.</caption>
+        <table class="results-table results-table--audio"><caption>Mean word error rate (lower is better). 120 paired runs per SNR condition; 480 overall. Rounded values.</caption>
         <thead>
         <tr><th scope="col">SNR</th><th scope="col">Original A</th><th scope="col">Redesign B</th></tr></thead>
         <tbody>
@@ -125,13 +124,13 @@
         <tr><td>5 dB</td><td>18.8%</td><td>17.8%</td></tr>
         <tr><td>All four conditions</td><td>18.3%</td><td>16.6%</td></tr></tbody></table></div>
         <p>The changes were evaluated together, so their separate causal effects were not established. One room, one speech recording and a limited set of conditions constrain transferability. The test measured transcript errors rather than real conversational success.</p>
-        <p>ReSpeaker yielded mean WER of 9.5% at SNR 5, with only 60 usable runs and none in the other conditions. It was approximately 30 cm closer to the source and used a different signal chain, limiting any comparison of mounting geometry. Production adoption was not established.</p></div></section>
+        <p>ReSpeaker yielded mean WER of 9.5% at SNR 5, with only 60 usable runs and none in the other conditions. It was approximately 30 cm closer to the source and used a different signal chain, limiting any comparison of mounting geometry. I did not evaluate production adoption.</p></div></section>
         <details class="technical-notes">
         <summary>Statistical methods and incomplete reference data<span class="chevron" aria-hidden="true"></span></summary>
         <div class="technical-content">
         <div class="case-copy">
-        <p>The reported one-sided paired t-test p-values for B versus A were &lt; 0.001 at SNR 20 and 15, 0.036 at SNR 10, 0.004 at SNR 5, and &lt; 0.001 overall. Reference comparisons used the matching 60-run A/B subset; its means should not be inferred from the full 120-run means above.</p>
-        <p>The thesis discusses suspected WebSocket transcript-boundary artefacts. The simplified channel model placed the prototype’s fundamental resonance above 20 kHz; this was a model estimate, not a measured frequency response. Internal-noise isolation had only qualitative support. Microphones were muted while Furhat spoke, so recognition during robot speech and acoustic echo cancellation were not evaluated.</p></div></div></details>
+        <p>The one-sided paired t-test p-values for B versus A were &lt; 0.001 at SNR 20 and 15, 0.036 at SNR 10, 0.004 at SNR 5, and &lt; 0.001 overall. Reference comparisons used the matching 60-run A/B subset; its means should not be inferred from the full 120-run means above.</p>
+        <p>I suspected WebSocket transcript-boundary artefacts. The simplified channel model placed the prototype’s fundamental resonance above 20 kHz; this was a model estimate, not a measured frequency response. Internal-noise isolation had only qualitative support. Microphones were muted while Furhat spoke, so recognition during robot speech and acoustic echo cancellation were not evaluated.</p></div></div></details>
 
 
         <nav class="project-pagination" aria-label="Other projects">
