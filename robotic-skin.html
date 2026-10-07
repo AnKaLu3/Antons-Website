@@ -6,7 +6,7 @@
     <title>Robotic skin development — Anton Kühr</title>
     <meta
       name="description"
-      content="Flexible tactile sensing, from a conductive-thread prototype to humanoid skin research."
+      content="A layered textile contact sensor, followed by a separate humanoid-skin investigation."
     />
     <meta name="author" content="Anton Kühr" />
     <meta name="theme-color" content="#071c17" />
@@ -20,13 +20,15 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=17" />
-    <script src="site.js?v=4" defer></script>
+    <link rel="stylesheet" href="styles.css?v=19" />
+    <script src="site.js?v=5" defer></script>
   </head>
-  <body>
+  <body class="project-page">
     <a class="skip-link" href="#main">Skip to content</a>
-    <header class="site-header">
-      <div class="container header-inner">
+
+        <header class="site-header">
+
+        <div class="container header-inner">
         <a class="wordmark" href="index.html" aria-label="Anton Kühr home"
           >Anton Kühr</a
         ><button
@@ -37,6 +39,7 @@
         >
           Menu <span aria-hidden="true">＋</span>
         </button>
+
         <nav id="site-nav" aria-label="Main navigation">
           <a href="index.html#portfolio">← All projects</a
           ><a href="index.html#about-me">About me</a
@@ -51,183 +54,83 @@
         </nav>
       </div>
     </header>
-    <main id="main">
-      <section class="project-hero">
-        <div class="container narrow">
-          <p class="eyebrow">
-            09/2024 – 03/2025 Product Engineering II Course at TH Köln ·
-            09/2026–present Project Echo at TU Delft
-          </p>
-          <h1>Robotic skin development</h1>
-          <p class="project-lead">
-            From a conductive-thread tactile prototype to developing scalable
-            skin concepts for a humanoid robot.
-          </p>
-          <p class="project-collaborators">
+    <main id="main" class="case-study">
+
+        <header class="project-hero">
+        <div class="container project-container">
+
+        <nav class="project-pagination project-pagination--top" aria-label="Other projects at top">
+            <a href="index.html#portfolio"><span>← Back to</span>All projects</a><a href="furhat-audio.html"><span>Next project →</span>Furhat’s audio system</a>
+          </nav>
+        <h1>Robotic skin development</h1>
+        <p class="project-lead">A layered textile contact sensor, followed by a separate humanoid-skin investigation.</p>
+
+        <dl class="project-facts">
+        <div><dt>Period</dt><dd>BSc: Sep 2024 – Mar 2025; Echo: Sep 2026 – present</dd></div>
+        <div><dt>Context</dt><dd>Product Engineering II, TH Köln; Project Echo, TU Delft</dd></div>
+        <div><dt>Status</dt><dd>BSc feasibility study completed; Echo investigation ongoing</dd></div>
+        <div><dt>My contribution</dt><dd>Joint BSc development with Fabio Jain; Skin Team Lead at Echo</dd></div></dl>
+        <p class="project-collaborators">
             <span>In collaboration with:</span>
             <a href="https://www.linkedin.com/in/fabio-jain-947705179/" target="_blank" rel="noopener">Fabio Jain ↗</a>
           </p>
-        </div>
-      </section>
-      <section class="project-body">
-        <div class="container narrow">
-          <div class="case-study-section">
-            <div class="case-study-copy">
-              <p class="eyebrow">01 / The question</p>
-              <h2>How can a robot know where it is being touched?</h2>
-              <p>
-                For a BSc project at TH Köln, Fabio and I explored a
-                textile-based tactile skin that could localise touch across a
-                surface. The prototype used conductive thread, layered materials
-                and custom electronics to create a flexible surface that could
-                detect where it was touched.
-              </p>
-            </div>
-          </div>
-          <div class="case-study-section">
-            <div class="case-study-copy">
-              <p class="eyebrow">02 / Sensor structure</p>
-              <h2>Building the sensing surface in layers.</h2>
-              <p>
-                The sensor was built as a layered structure. Conductive sender
-                and receiver layers were separated by a laser-cut foam-rubber
-                mesh, while an outer layer formed the touch surface. This
-                approach allowed the sensing elements to remain flexible instead
-                of relying on a rigid sensor board.
-              </p>
-            </div>
-            <figure>
-              <div class="gallery-image contain">
-                <img
-                  src="assets/projects/robotic-skin/skin-sensor.png"
-                  alt="Layered tactile sensor structure with conductive sender and receiver layers"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption>
-                Layered sensor concept — conductive sender and receiver layers
-                are separated inside the flexible tactile surface.
-              </figcaption>
-            </figure>
-          </div>
-          <div class="case-study-section">
-            <div class="case-study-copy">
-              <p class="eyebrow">03 / Making the sensor</p>
-              <h2>Turning conductive thread into a functional prototype.</h2>
-              <p>
-                Conductive threads were woven into robust fabric to create the
-                electrical sensing layers and developed the surrounding
-                measurement electronics. Shift registers and simple measurement
-                circuits were then used to address the sensor and read the touch
-                locations.
-              </p>
-            </div>
-            <figure>
-              <div class="gallery-image detail">
-                <img
-                  src="assets/projects/robotic-skin/skin-fabric.png"
-                  alt="Conductive thread woven into fabric to form a tactile sensing layer"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption>
-                Conductive thread woven into fabric — the physical sensing layer
-                used in the prototype.
-              </figcaption>
-            </figure>
-          </div>
-          <div class="case-study-section">
-            <div class="case-study-copy">
-              <p class="eyebrow">04 / Testing touch localisation</p>
-              <h2>From material sample to interactive sensor.</h2>
-              <p>
-                The completed prototype was tested through repeated hands-on
-                touch localisation. The sensing electronics translated
-                interactions with the fabric into detected positions, which
-                could then be visualised on the accompanying display.
-              </p>
-            </div>
-            <figure>
-              <div class="gallery-image wide">
-                <img
-                  src="assets/projects/robotic-skin/robotic-skin.png"
-                  alt="Touch-localisation testing with the textile sensor and detected position display"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption>
-                Touch-localisation testing — pressing the textile sensor
-                produces a corresponding detected position on the display.
-              </figcaption>
-            </figure>
-          </div>
-          <div class="case-study-section">
-            <div class="case-study-copy">
-              <p class="eyebrow">05 / From prototype to Project Echo</p>
-              <h2>Scaling the idea toward humanoid skin.</h2>
-              <p>
-                Since September 2026, I have been building on this experience as
-                Skin Team Lead for
-                <a
-                  href="https://www.instagram.com/project_echo_delft/"
-                  target="_blank"
-                  rel="noopener"
-                  >RSA Project Echo</a
-                >
-                at TU Delft. The new challenge is broader than the original
-                prototype: we are investigating concepts that can scale across a
-                humanoid body while combining touch localisation, approximate
-                force sensing and a protective soft outer layer.
-              </p>
-            </div>
-            <figure>
-              <div class="gallery-image">
-                <img
-                  src="assets/projects/robotic-skin/echo-project.png"
-                  alt="Project Echo humanoid robot prototype with exposed tactile-skin electronics"
-                  loading="lazy"
-                />
-              </div>
-              <figcaption>
-                <a
-                  href="https://www.instagram.com/project_echo_delft/"
-                  target="_blank"
-                  rel="noopener"
-                  >RSA Project Echo</a
-                >
-                — the humanoid platform motivating the next generation of
-                distributed tactile skin.
-              </figcaption>
-            </figure>
-          </div>
-          <div class="outcome">
-            <p class="eyebrow">Current direction</p>
-            <p>
-              The BSc prototype localised touch on a flexible conductive-fabric
-              surface. In Project Echo, the focus is now on scaling tactile
-              sensing and protective soft skin across a humanoid body, with the
-              wider project aiming toward RoboCup Rescue 2028.
-            </p>
-            <ul class="tags" aria-label="Skills">
-              <li>Tactile sensing</li>
-              <li>Conductive textiles</li>
-              <li>Sensor integration</li>
-              <li>Prototyping</li>
-              <li>Human–robot interaction</li>
-              <li>Team leadership</li>
-            </ul>
-          </div>
-          <nav class="project-pagination" aria-label="Other projects">
-            <a href="index.html#portfolio"><span>← Back to</span>All projects</a
-            ><a href="furhat-audio.html"
-              ><span>Next project →</span>Furhat’s audio system</a
-            >
+
+        <div class="project-overview">
+        <p class="project-result"><strong>64 sensing locations and two active pressure levels</strong>, demonstrated in a flexible BSc contact-matrix prototype.</p>
+        <figure class="case-figure "><a class="figure-media" href="assets/projects/robotic-skin/robotic-skin.png" target="_blank" rel="noopener" aria-label="Open full-size image: BSc tactile-sensor prototype and touch display"><img src="assets/projects/robotic-skin/robotic-skin.png" alt="BSc tactile-sensor prototype and touch display" width="2502" height="1682" fetchpriority="high" decoding="async" /></a>
+        <figcaption>The BSc prototype in touch-localisation testing. <a class="figure-full" href="assets/projects/robotic-skin/robotic-skin.png" target="_blank" rel="noopener">Full size ↗</a></figcaption></figure></div>
+      </div></header>
+
+        <div class="project-body">
+        <div class="container project-container">
+        <section id="context" class="case-section case-section--text">
+        <div class="case-copy">
+        <h2>Context and my role</h2>
+        <p>Fabio Jain and I developed a tactile-sensor feasibility prototype for Product Engineering II at TH Köln. We wanted to detect contact position and distinguish lighter from stronger contact using materials and fabrication available in a university workshop. The completed BSc study and my later Project Echo role are separate projects.</p></div></section>
+        <section id="implementation" class="case-section case-section--support">
+        <div class="case-copy">
+        <h2>A contact matrix with two triggering thresholds</h2>
+        <p>Perpendicular conductive tracks form an 8 × 8 matrix. At rest, perforated elastic separators hold the sender and receiver tracks apart. A press compresses a separator until tracks touch through its openings. An Arduino activates each sender track in turn and reads the receivers; the connected pair identifies a sensing location.</p>
+        <p>One sender layer, two receiver layers and two separators provide two active pressure levels plus no contact. These are discrete contact thresholds. The prototype does not continuously measure force.</p></div>
+        <figure class="case-figure case-figure--neutral"><a class="figure-media" href="assets/projects/robotic-skin/skin-sensor.png" target="_blank" rel="noopener" aria-label="Open full-size image: Layered sensor schematic with one sender, two receivers, separators and protective covers"><img src="assets/projects/robotic-skin/skin-sensor.png" alt="Layered sensor schematic with one sender, two receivers, separators and protective covers" width="2016" height="1232" loading="lazy" decoding="async" /></a>
+        <figcaption>The two receiver layers provide different contact thresholds; the covers are protective layers. <a class="figure-full" href="assets/projects/robotic-skin/skin-sensor.png" target="_blank" rel="noopener">Full size ↗</a></figcaption></figure></section>
+        <section id="fabrication" class="case-section case-section--support">
+        <div class="case-copy">
+        <h2>Sewn conductors and perforated foam</h2>
+        <p>We sewed Madeira HC-12 conductive thread onto denim in zigzag tracks, avoiding specialised conductive printing and plating. Denim could be sewn and resisted tearing. Laser-perforated EVA foam supplied the elastic separation; its thickness and fill density set the triggering threshold.</p>
+        <p>The tracks were 5 mm wide with 8 mm centre-to-centre spacing. Shift registers reduced the microcontroller connections needed to address and read the matrix.</p></div>
+        <figure class="case-figure "><a class="figure-media" href="assets/projects/robotic-skin/skin-fabric.png" target="_blank" rel="noopener" aria-label="Open full-size image: Conductive zigzag tracks sewn onto denim"><img src="assets/projects/robotic-skin/skin-fabric.png" alt="Conductive zigzag tracks sewn onto denim" width="1570" height="1482" loading="lazy" decoding="async" /></a>
+        <figcaption>Sewn conductive tracks form the electrical sensing layers. <a class="figure-full" href="assets/projects/robotic-skin/skin-fabric.png" target="_blank" rel="noopener">Full size ↗</a></figcaption></figure></section>
+        <section id="results" class="case-section case-section--results">
+        <div class="case-copy">
+        <h2>Results and limitations</h2>
+        <p>The prototype detected contact locations across 64 sensing cells, with several cells responding under a larger contact area. In five threshold tests per configuration, averaged using a rounded 16 mm test cube, increasing separator fill density and thickness from 2 to 3 mm raised the activation pressure. It remained functional when wrapped around a 100 mm-diameter cylinder, with no measurable change reported in that test.</p>
+        <p>The 8 mm value is track pitch, rather than a validated localisation error. Precise triggering accuracy was not established. The stack was more than 1 cm thick, wiring became burdensome at larger scales, and material deformation produced reported measurement errors up to 10%. Maximum bending, long-term durability and whole-body coverage remained untested.</p></div>
+        </section>
+<details class="technical-notes">
+        <summary>Sensor construction and evaluation<span class="chevron" aria-hidden="true"></span></summary>
+        <div class="technical-content">
+        <div class="case-copy">
+        <p>SN74HC595 output registers activate one sender track at a time; SN74HC165 input registers serialise receiver states. Pull-down resistors and output-protection diodes support the readout. Serial scanning limits scaling, and no measured frame rate or general ghost-free multi-touch result was established.</p>
+        <p>The paper reports prototype material costs below €10. This excludes an installed-system price or labour estimate. Its investigated activation-pressure range was approximately 10–100 Pa, with threshold measurements rounded because of measurement uncertainty. A third active pressure level was reserved in the communication protocol for future extension.</p></div></div></details>
+        <section id="project-echo" class="case-section case-section--support">
+        <div class="case-copy">
+        <h2>Project Echo: a separate investigation</h2>
+        <p class="case-period">Sep 2026 – present · TU Delft · Ongoing investigation</p>
+        <p>I am Skin Team Lead for <a class="text-link" href="https://www.instagram.com/project_echo_delft/" target="_blank" rel="noopener">RSA Project Echo ↗</a>. Our stated goals are scalable touch localisation, approximate force sensing and a protective soft outer layer for a humanoid, with the wider project aiming towards RoboCup Rescue 2028. These are investigation goals; the BSc measurements above do not establish Echo performance.</p></div>
+        <figure class="case-figure "><a class="figure-media" href="assets/projects/robotic-skin/echo-project.png" target="_blank" rel="noopener" aria-label="Open full-size image: Existing Project Echo humanoid-platform image"><img src="assets/projects/robotic-skin/echo-project.png" alt="Existing Project Echo humanoid-platform image" width="803" height="768" loading="lazy" decoding="async" /></a>
+        <figcaption>The humanoid platform motivating Project Echo’s separate skin investigation. <a class="figure-full" href="assets/projects/robotic-skin/echo-project.png" target="_blank" rel="noopener">Full size ↗</a></figcaption></figure></section>
+
+        <div class="project-resources" aria-label="Project resources"><a class="text-link" href="https://www.instagram.com/project_echo_delft/" target="_blank" rel="noopener">Project Echo ↗</a><a class="text-link" href="index.html#portfolio">Return to portfolio →</a></div>
+
+        <nav class="project-pagination" aria-label="Other projects">
+            <a href="index.html#portfolio"><span>← Back to</span>All projects</a><a href="furhat-audio.html"><span>Next project →</span>Furhat’s audio system</a>
           </nav>
-        </div>
-      </section>
+      </div></div>
     </main>
     <footer>
-      <div class="container footer-inner">
+
+        <div class="container footer-inner">
         <span>© 2026 Anton Kühr</span>
       </div>
     </footer>

@@ -24,64 +24,8 @@ if (initialSectionAlias) {
 }
 window.addEventListener("hashchange", updateSectionHash);
 
-// Native details remain usable without JavaScript; enhance expandable sections with motion.
-document.querySelectorAll("[data-expandable]").forEach((details) => {
-  const summary = details.querySelector("summary");
-  const content = details.querySelector(".expandable-content");
-  const closeButton = details.querySelector(".expandable-close");
-  let animation = null;
-  content.tabIndex = -1;
-
-  function setExpanded(open) {
-    if (animation) return;
-    const startHeight = details.getBoundingClientRect().height;
-    // Measure the opener even while it is hidden in the expanded state.
-    summary.style.display = "inline-flex";
-    const closedHeight = summary.getBoundingClientRect().height;
-    summary.style.removeProperty("display");
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    if (open) {
-      details.open = true;
-      content.focus({ preventScroll: true });
-    } else if (details.getBoundingClientRect().top < 85) {
-      details.scrollIntoView({
-        behavior: reduceMotion ? "instant" : "smooth",
-        block: "start",
-      });
-    }
-
-    function finish() {
-      if (!open) {
-        details.open = false;
-        summary.focus({ preventScroll: true });
-      }
-      details.style.removeProperty("overflow");
-      animation = null;
-    }
-
-    if (reduceMotion) {
-      finish();
-      return;
-    }
-
-    details.style.overflow = "hidden";
-    animation = details.animate(
-      [
-        { height: `${startHeight}px` },
-        { height: `${open ? details.scrollHeight : closedHeight}px` },
-      ],
-      { duration: 360, easing: "cubic-bezier(0.22, 1, 0.36, 1)" },
-    );
-    animation.onfinish = finish;
-  }
-
-  summary.addEventListener("click", (event) => {
-    event.preventDefault();
-    setExpanded(!details.open);
-  });
-  closeButton.addEventListener("click", () => setExpanded(false));
-});
+// CV and technical disclosures use native details/summary.
+// Keep the opener and browser focus/scroll behaviour in both states.
 
 const menuButton = document.querySelector(".menu-button");
 const navigation = document.getElementById("site-nav");
