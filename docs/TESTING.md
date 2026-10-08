@@ -221,3 +221,5 @@ Typography preference follow-up: restored the previous smaller CV dates and proj
 Homepage containers retain their 1000px maximum. Project content containers now have a 750px maximum for shorter text lines. Contact uses content-sized columns distributed across the homepage width, with its final text aligned to the right edge on desktop; existing tablet/phone column changes remain. Stylesheet version 69.
 
 Safari passed 28 expanded checks across seven pages at 320, 390, 768 and 1440px: homepage and project content widths match the requested caps and responsive margins, Contact fills its container and desktop rightmost text aligns, with no horizontal overflow. Whitespace checks passed. Temporary fixture and preview server removed; user edits retained and changes remain local.
+
+Landscape Safari text-size follow-up: set prefixed and standard text-size-adjust to 100% on the root element to prevent automatic block-specific font inflation. All HTML pages use stylesheet version 75. Confirmed no conflicting auto override or zoom restriction; whitespace checks passed. Physical iPhone orientation behavior remains to be checked on device.

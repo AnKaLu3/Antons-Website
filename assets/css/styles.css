@@ -132,6 +132,9 @@ h3 {
 }
 
 html {
+  /* Keep iPhone landscape text at the authored size instead of inflating blocks. */
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   scroll-behavior: smooth;
   scroll-padding-top: 85px;
 }
