@@ -43,6 +43,46 @@ document.addEventListener("keydown", (event) => {
     menuButton.focus();
   }
 });
+// Measure intrinsic desktop widths so font loading and zoom cannot wrap the links.
+const header = navigation?.closest(".header-inner");
+const skinDate = document.querySelector(".skin-project-date");
+function updateResponsiveLayout() {
+  if (header && navigation) {
+    const probe = navigation.cloneNode(true);
+    probe.removeAttribute("id");
+    probe.className = "nav-fit-probe";
+    probe.setAttribute("aria-hidden", "true");
+    probe.inert = true;
+    document.body.append(probe);
+    const requiredWidth = probe.getBoundingClientRect().width
+      + header.querySelector(".wordmark").getBoundingClientRect().width + 28;
+    probe.remove();
+    const mobile = window.matchMedia("(max-width: 800px)").matches
+      || requiredWidth > header.clientWidth;
+    if (mobile !== header.classList.contains("nav-mobile")) setMenu(false);
+    header.classList.toggle("nav-mobile", mobile);
+  }
+  if (skinDate) {
+    const probe = skinDate.cloneNode(true);
+    probe.classList.remove("date-compact");
+    probe.classList.add("date-fit-probe");
+    probe.style.whiteSpace = "nowrap";
+    probe.setAttribute("aria-hidden", "true");
+    skinDate.parentElement.append(probe);
+    const compact = probe.getBoundingClientRect().width > skinDate.parentElement.clientWidth;
+    probe.remove();
+    skinDate.classList.toggle("date-compact", compact);
+  }
+}
+updateResponsiveLayout();
+window.addEventListener("resize", updateResponsiveLayout);
+document.fonts?.ready.then(updateResponsiveLayout);
+if ("ResizeObserver" in window) {
+  const layoutObserver = new ResizeObserver(updateResponsiveLayout);
+  if (header) layoutObserver.observe(header);
+  if (skinDate) layoutObserver.observe(skinDate.parentElement);
+}
+
 const sectionLinks = Array.from(
   document.querySelectorAll('#site-nav a[href^="#"]'),
 );

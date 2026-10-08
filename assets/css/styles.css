@@ -322,7 +322,7 @@ a {
   min-height: 44px;
 }
 
-#site-nav {
+:is(#site-nav, .nav-fit-probe) {
   display: flex;
   align-items: center;
   gap: 22px;
@@ -331,12 +331,13 @@ a {
   text-transform: none;
 }
 
-#site-nav a {
+:is(#site-nav, .nav-fit-probe) a {
+  white-space: nowrap;
   padding: 10px 0;
   border-bottom: 1px solid transparent;
 }
 
-#site-nav .nav-social {
+:is(#site-nav, .nav-fit-probe) .nav-social {
   border: 1px solid var(--line);
   padding: 8px 14px;
   border-radius: var(--radius-sm);
@@ -752,7 +753,9 @@ html:not(.js) .cv-close {
 /* PORTFOLIO CARDS — Home-page project cards, image sizing, labels, dates, and image arrows. */
 .project-card .project-image {
   order: 4;
-  margin-top: 20px;
+  /* Grid stretches paired cards equally; absorb spare copy space above the image. */
+  margin-top: auto;
+  flex-shrink: 0;
 }
 
 .project-card .card-meta {
@@ -783,6 +786,7 @@ html:not(.js) .cv-close {
 
 .project-card > p {
   order: 3;
+  margin-bottom: 20px;
   color: var(--fg-2);
   max-width: 480px;
   font-size: var(--text-body);
@@ -1784,7 +1788,7 @@ html:not(.js) .cv-close {
   .container {
     width: calc(100% - 48px);
   }
-  #site-nav {
+  :is(#site-nav, .nav-fit-probe) {
     gap: 16px;
   }
   .hero .actions {
@@ -2214,7 +2218,7 @@ html:not(.js) .cv-close {
 /* A single typographic hierarchy for supporting project headings and controls. */
 .technical-notes > summary, .ik-equations > summary { font-size: var(--text-body); font-weight: 500; }
 .ik-equations .ik-equation-panels h4 { font-size: var(--text-body); font-family: var(--sans); }
-@media (min-width: 801px) and (max-width: 1100px) { #site-nav { gap: 14px; } #site-nav .nav-social { padding-inline: 8px; } }
+@media (min-width: 801px) and (max-width: 1100px) { :is(#site-nav, .nav-fit-probe) { gap: 14px; } :is(#site-nav, .nav-fit-probe) .nav-social { padding-inline: 8px; } }
 
 /* Hero actions: secondary links above the primary link. */
 .hero .actions { display: grid; grid-template-columns: minmax(0, 1fr) auto; width: max-content; max-width: 100%; gap: 12px; }
@@ -2248,3 +2252,42 @@ html:not(.js) .cv-close {
     content: "· ";
   }
 }
+
+/* Use the mobile menu whenever the desktop links no longer fit on one line. */
+.header-inner.nav-mobile {
+  flex-wrap: wrap;
+  gap: 0;
+  min-height: 66px;
+}
+.nav-mobile .menu-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+.js .nav-mobile #site-nav { display: none; }
+.js .nav-mobile #site-nav.open { display: flex; }
+.nav-mobile #site-nav {
+  flex-basis: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  padding: 12px 0 20px;
+}
+.nav-mobile #site-nav a {
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+.nav-mobile #site-nav .nav-social {
+  margin-top: 10px;
+  text-align: center;
+}
+.nav-fit-probe, .date-fit-probe {
+  position: absolute;
+  width: max-content;
+  visibility: hidden;
+  pointer-events: none;
+}
+.skin-date-compact { display: none; }
+.skin-project-date.date-compact .skin-date-full { display: none; }
+.skin-project-date.date-compact .skin-date-compact { display: inline; }
+.skin-project-date { text-transform: none; }
