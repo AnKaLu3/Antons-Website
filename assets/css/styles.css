@@ -509,12 +509,17 @@ a {
   font-size: var(--text-small);
 }
 
-.facts span {
+.facts > div > span {
   text-align: left;
   font: 0.75rem/1.8 var(--sans);
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+}
+
+/* Keep About labels in their own column, including at the CV mobile breakpoint. */
+.facts > div > .cv-date {
+  grid-column: auto;
 }
 
 .facts p {

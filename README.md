@@ -17,3 +17,5 @@ Website: https://antonkuehr.github.io/akrobotics/
 Public media use descriptive filenames identifying the person or project and the document or image subject. Update every reference when renaming an asset.
 
 The current CV is `assets/site/certificates/anton-kuehr-cv-and-portfolio-2026.pdf`. The homepage link includes a `?v=` value based on the PDF content to avoid serving a cached earlier version. When replacing the PDF, update this value in `index.html` (a new revision value is sufficient).
+
+Search visibility and Google Search Console setup: see [docs/SEO.md](docs/SEO.md).

@@ -163,3 +163,15 @@ Safari audit passed 12/12 checks for home, audio, Furpack and harvesting at 1440
 
 
 Typography review (08/10/2026): consolidated the site into supporting text (14 px), body/navigation (16 px), item headings/wordmark (20 px), section headings (24 px), and responsive page titles (32–48 px). Space Grotesk is reserved for headings/identity; Inter for reading and controls. CSS parsing, local asset references and whitespace checks passed. Safari visual review was interrupted by concurrent browser use and was not completed.
+
+## Mobile About facts and search metadata — 8 October 2026
+
+Fixed a selector collision: the phone `.cv-date` grid placement also affected the About facts labels, making their values fall into the narrow label column. A more specific About-only rule keeps labels and values side by side while preserving the CV date layout. Limited facts label typography to direct label children so the new TOEFL link arrow inherits its intended link styling. Added the existing score-report PDF destination to the About Languages entry.
+
+Safari passed five homepage viewport checks at 320, 390, 580, 768 and 1440 CSS pixels. All four facts rows remained side by side and aligned without row or page overflow; “Delft, Netherlands” occupied one line at every width. The TOEFL link resolved to the existing certificate. Visually inspected the 320px and 390px rows and link. These are desktop Safari frames at phone widths, not physical-device tests.
+
+A local audit passed across eight HTML pages: one H1 per page, unique IDs and metadata keys, seven correct content-page canonicals, valid JSON-LD JSON and expected schema relationships, exact seven-page sitemap coverage with modification dates, explicit error-page noindex, existing share-preview assets, and all **257 local URL/asset/fragment references**. JavaScript syntax and `git diff --check` passed. Schema syntax was checked locally; Google's Rich Results Test and actual indexing were not verified.
+
+Read-only public HTTP checks confirmed that the homepage, project sitemap and project-directory robots.txt return 200. The host-root robots.txt returns 404; Google ignores the copy in a subdirectory, but a missing root file does not prohibit crawling. The direct `/404.html` URL currently returns 200, which is addressed by the new noindex metadata after publication. These checks were against the previously deployed site and do not verify deployment of the local changes.
+
+Added `docs/SEO.md` with owner verification, sitemap submission and URL inspection instructions. The user confirmed Search Console has not been set up. Verification and indexing requests require the owner's Search Console property and were not submitted. Removed the temporary browser fixture and closed the owned review tab/server. No deployment performed; pre-existing working-copy edits retained.
