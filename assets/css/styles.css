@@ -935,7 +935,7 @@ html:not(.js) .cv-close {
   grid-template-columns: repeat(3, max-content);
   justify-content: space-between;
   column-gap: 24px;
-  row-gap: 44px;
+  row-gap: 56px;
   width: 100%;
 }
 
@@ -1938,7 +1938,7 @@ html:not(.js) .cv-close {
   }
   .skills-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 48px;
   }
 }
 
@@ -2237,4 +2237,14 @@ html:not(.js) .cv-close {
 
 .cv-date > .date-duration {
   display: block;
+}
+
+@media (max-width: 580px) {
+  .cv-date > .date-duration {
+    display: inline;
+  }
+
+  .cv-date > .date-duration::before {
+    content: "· ";
+  }
 }
