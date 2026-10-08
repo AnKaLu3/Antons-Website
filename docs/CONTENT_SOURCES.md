@@ -184,3 +184,19 @@ HARVEST pp. 6–8 explicitly names an F-test, including the failure-rate section
 The audio thesis is already linked from the homepage at `assets/site/certificates/anton-kuehr-bachelors-thesis.pdf`; the project page now links the same existing file. The nine-week duration and 03/2026 submission are verified by the thesis, while employment and portfolio periods remain separate. Furpack status and its PDF caption now describe manufacturing handover rather than a production launch or final manufactured design.
 
 Thesis §2.2.5 explicitly dates the conducted work to 2 February–30 March 2026; public formal months use 02/2026 – 03/2026, separately from project preparation and employment. Appendix A schedules discovery in Nov 2025–Jan 2026 and starts W1 on 26 January; the main text takes precedence for formal months. The documented 360° prototype is dated 05/2025 in the deck/report; both homepage and case study now use the same documented build period pending any author clarification about later activity.
+
+## Expanded study programme descriptions — 8 October 2026
+
+The MSc and BSc Education disclosures in `index.html` now each contain three paragraphs explaining programme scope, learning methods and study progression. Existing degree dates, grades, evidence links, scholarship and radio-interview content are retained. Programme options are described as options, without claiming completed MSc modules, a chosen second-year route or a future thesis topic.
+
+| Official source | Claims supported |
+| --- | --- |
+| [TU Delft MSc Robotics overview](https://www.tudelft.nl/en/education/programmes/masters/robotics/msc-robotics) | Two years, 120 ECTS; mechanical engineering and AI; modelling, design, control, validation and interaction. |
+| [TU Delft programme structure](https://www.tudelft.nl/en/education/programmes/masters/robotics/msc-robotics/programme) | Core subjects, project, electives, reflection; second-year choices, literature research and thesis. |
+| [TH Köln English MPEC overview](https://www.th-koeln.de/en/academics/mechanical-engineering---product-engineering-and-context-bachelors-program_92560.php) and [German overview](https://www.th-koeln.de/studium/maschinenbau--product-engineering-and-context-bachelor_92158.php) | Seven semesters, 210 ECTS; technical disciplines and responsible engineering context. |
+| [TH Köln curriculum](https://www.th-koeln.de/studium/maschinenbau--product-engineering-and-context-bachelor--inhalte_94213.php) | Coached projects, progressive autonomy, elective focus and final study stages. |
+| [TH Köln programme advice](https://www.th-koeln.de/studium/maschinenbau--product-engineering-and-context-bachelor--beratung_92183.php) | User needs in product-development context. |
+
+TU Delft blocked the web reader with HTTP 403; its live overview and both curriculum tabs were read successfully in Safari. Its current programme diagram has a 2025–2026 filename, matching the existing local asset. The public link label therefore no longer claims a specific 2026–2028 cohort. Historical programme papers on TU Delft’s own research portal were cross-checked during research, but current programme pages are the final basis for the new copy. Descriptions are paraphrased, with direct curriculum links available in both disclosures.
+
+The visible Furhat job introduction describes the company as developing social robots for research, education and human–robot interaction, paraphrased from [Furhat Robotics’ official homepage](https://www.furhatrobotics.com/) (read 8 October 2026). The internship and thesis-related employment dates follow the user’s supplied wording.

@@ -20,7 +20,7 @@ Reviewed 7 October 2026. These notes accompany the local working copy; they are 
 | Furhat 360 header and home card | Prior site: 06/2025 – 07/2025. Report/deck document a two-week prototype in 05/2025. | The site now uses 05/2025 – 05/2025 for the documented prototype. Author clarification was requested about any additional later work; no later activity is inferred. |
 | Furhat 360 collaborators | Existing site: **Qing Gu**, with the existing LinkedIn destination. ROT-REPORT: **Lesley Gu**. | Confirm whether these identify the same person and the preferred public name. The existing name and link are preserved. |
 | Audio / employment dates | Project: 11/2025 – 03/2026; employment phase: 10/2025 – 04/2026. Thesis §2.2.5 states 2 February–30 March 2026; appendix schedule starts 26 January. Submission: 27 March 2026. | Public copy distinguishes preparation, broader employment and formal work (02/2026 – 03/2026), following the main thesis text. The day-level schedule inconsistency is not used to invent a new date. |
-| MSc evidence link | Existing link label says programme structure **2026–2028**, but the retained asset filename is `tu-delft-msc-robotics-programme-structure-2025-2026.png`. | Confirm which cohort the document describes and supply the intended version if different. The original label and destination are preserved. |
+| MSc evidence link | On 8 October 2026, TU Delft’s live programme page links a curriculum diagram named **Program MSc Robotics 2025-2026.png**, consistent with the retained asset. | Removed the unsupported 2026–2028 label; the link now says “View programme structure” and preserves its destination. The diagram is not presented as a confirmed 2026–2028 cohort document. |
 
 ## Metrics, methods and engineering limits
 

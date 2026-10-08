@@ -11,11 +11,19 @@ Updated 8 October 2026. Canonical public site: https://antonkuehr.github.io/akro
 - The error page explicitly requests `noindex, follow` and is excluded from the sitemap. The public `/404.html` URL returned HTTP 200 in the live audit, so this prevents indexing the direct error-page URL after publication.
 - Search metadata is present in the original HTML and needs no JavaScript. Existing headings, crawlable project links, descriptive media names, alt text, lazy loading and mobile navigation are retained.
 
-These changes are local and take effect after the normal GitHub Pages publication. Search visibility cannot be established or guaranteed by changing metadata alone.
+Search metadata takes effect after the normal GitHub Pages publication. Search visibility cannot be established or guaranteed by changing metadata alone.
+
+## Search Console actions — 8 October 2026
+
+The existing URL-prefix property is `https://antonkuehr.github.io/akrobotics/`. Inspected the failed sitemap entry in the browser: it already points to the correct `/akrobotics/sitemap.xml` URL. The report's shortened `/sitemap.xml` label is relative to this property, so it was not evidence of a domain-root submission.
+
+Google's live URL test successfully fetched the sitemap using its smartphone inspection tool, with **Crawling allowed: Yes** and **Page fetch: Successful**. Resubmitted `sitemap.xml`; Search Console confirmed **Sitemap submitted**. The report still displayed **Couldn't fetch** when checked afterward; successful sitemap processing is pending and has not been confirmed.
+
+The homepage inspection reported **URL is unknown to Google**, explaining its absence from search at that point. Requested homepage indexing. Search Console confirmed **Indexing requested** and that the URL was added to a priority crawling queue. This is an accepted request, not confirmation that the page has been indexed. Repeated requests do not increase priority. The existing property and submission access were already available; no ownership or account permissions were changed.
 
 ## Owner setup after publication
 
-The supplied HTML-file verification is prepared as `googlebdaa3890157682d4.html` beside `index.html`, containing exactly `google-site-verification: googlebdaa3890157682d4.html`. After publication, check `https://antonkuehr.github.io/akrobotics/googlebdaa3890157682d4.html`, then click **Verify** in Search Console's HTML-file method. Keep the file published after verification. This replaces the need to add a meta tag for this verification method; verification has not yet been submitted.
+The supplied HTML-file verification is prepared as `googlebdaa3890157682d4.html` beside `index.html`, containing exactly `google-site-verification: googlebdaa3890157682d4.html`. Keep it published at `https://antonkuehr.github.io/akrobotics/googlebdaa3890157682d4.html`. This replaces the need to add a meta tag for this verification method. The Search Console property is now available; the verification action itself was performed outside this agent's browser session.
 
 1. Open [Google Search Console](https://search.google.com/search-console) with the Google account that should own the website. Add a **URL-prefix** property with the exact value `https://antonkuehr.github.io/akrobotics/`. Domain verification is unsuitable for a shared `github.io` hostname whose DNS you do not control.
 2. Choose **HTML tag** verification, then copy the complete `google-site-verification` meta tag. Add that exact tag inside the homepage’s `<head>`, publish, and select **Verify**. Keep the tag after verification. Alternatively, place Google's provided verification HTML file at this repository's root, publish it at the URL Google requests, then verify. Do not invent a verification token.

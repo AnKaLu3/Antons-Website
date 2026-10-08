@@ -2224,3 +2224,8 @@ html:not(.js) .cv-close {
 
 /* Align the About me facts with the photo and personal note. */
 .about-aside > .facts { width: 100%; max-width: 460px; margin-inline: 0; }
+
+/* Keep the Furhat company link beside its introduction in either state. */
+.cv-company-link {
+  margin-top: 0;
+}

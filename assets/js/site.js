@@ -96,6 +96,7 @@ for (const details of document.querySelectorAll("details")) {
     };
   }
   summary.addEventListener("click", event => {
+    if (event.target.closest("a")) return;
     event.preventDefault();
     toggle(animation ? !intendedOpen : !details.open);
   });
