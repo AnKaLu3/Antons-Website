@@ -191,3 +191,33 @@ Safari passed four viewport checks (320, 390, 768 and 1440 CSS pixels): descript
 Follow-up: replaced the role summary with the requested internship/employment dates first, followed by a short company description based on Furhat Robotics’ official homepage. Removed the collapsed header’s bottom padding and company-link top margin, and aligned the link with the introduction on phones. Safari passed spacing checks at 320, 390, 640, 768 and 1440 CSS pixels: the company link sits directly below the introduction, remains visible when collapsed and aligns with the text; no horizontal overflow. Visually reviewed the 390px layout. Homepage stylesheet cache version updated to 57. Changes remain local.
 
 Final Furhat link adjustment: the company link now remains directly beneath the introduction in both disclosure states. Link clicks are excluded from the JavaScript disclosure handler, so the external destination remains independently operable. Removed the conditional hiding and external-link layout rules. JavaScript syntax and whitespace checks passed. This supersedes the earlier link-placement notes.
+
+## Date-range durations — 8 October 2026
+
+Added 39 duration labels across all seven content pages, including CV entries, project cards, project facts and date ranges in prose. Calendar-month counts include both endpoints; same-month ranges show 1 mo, and exact years omit zero months. Ongoing labels have static HTML fallbacks and update from the visitor’s current month via the shared script. Single dates and separate election dates are unchanged.
+
+Safari passed all 21 expanded-layout combinations at 320, 390 and 1440 CSS pixels with no horizontal overflow; visually reviewed the 390px Furhat header and durations. A text audit confirmed every visible date range has a label. Three deterministic script checks covered current-month, year-boundary and exact-year ongoing durations. JavaScript syntax and whitespace checks passed. Asset cache versions updated on all pages. Temporary fixture and preview server removed; changes remain local.
+
+Duration refinement: duration units now keep their lowercase styling on project cards. The skin card shows its separate BSc and Echo periods and a combined active duration (7 completed months plus the current Echo period), also shown in the case-study facts. The gap between projects is excluded. Combined totals passed checks at October 2026, January 2027 and September 2027. Removed all four duration labels from Education as requested. JavaScript syntax and whitespace checks passed.
+
+## Shared full-page section width — 8 October 2026
+
+All page containers now use the available viewport width with the shared responsive side margins (32px desktop, 24px tablet, 18px phone). Removed narrower section limits from CV lists, project containers, project facts, workflows, standard videos and page headings. Portrait videos retain their aspect-appropriate sizing. About facts fill their column. Stylesheet cache version advanced to 63 across the HTML pages.
+
+Safari passed 28 expanded-layout checks across seven content pages at 320, 390, 1440 and 1920 CSS pixels: identical container widths, CV lists/case sections/project facts fill their parent, and no horizontal overflow. Visually reviewed the phone Jobs section. Whitespace checks passed; temporary fixture and preview server removed. Changes remain local.
+
+Width clarification: restored the original 1120px maximum page container, keeping all sections aligned to that shared width. CV and project-specific narrower caps remain removed. Responsive side margins are unchanged. This supersedes the viewport-wide container described above.
+
+Skills width follow-up: reduced the shared page maximum from 1120px to 1040px. Collaboration and Languages now use two equal columns spanning the full Skills row, instead of occupying only two of three tracks. Safari passed seven homepage checks at 320, 390, 580, 768, 1000, 1100 and 1440px: both Skills rows fill the container, rightmost groups reach the row edge, the desktop container measures 1040px, and no horizontal overflow. The phone single-column layout is retained. Stylesheet cache version is 65. Temporary fixture and preview server removed; changes remain local.
+
+Skills alignment and date typography refinement: combined the five Skills groups into one grid so both desktop rows share content-sized column tracks. Space between tracks is distributed equally, based on each column’s widest text; the last column’s widest line reaches the container edge. Removed the independent two-column secondary grid. Dates, captions, project-card dates and duration labels now use the 16px body size.
+
+Safari passed 25 expanded page/viewport combinations: seven homepage widths from 320 to 1440px and three widths on each project page. Desktop text-range measurements confirmed equal text-edge gaps, matching first/second-column starts between rows, and right-edge text alignment within 2px. All date/duration selectors computed to 16px and no pages overflowed horizontally. Visually reviewed the tablet Skills layout. Whitespace checks passed. Stylesheet version 66; changes remain local.
+
+Typography preference follow-up: restored the previous smaller CV dates and project-card dates/durations. Removed the forced body size from captions and duration labels so they inherit their previous context styling. Corrected Skills spacing remains. Stylesheet version 67; whitespace checks passed.
+
+## Final page-width split — 8 October 2026
+
+Homepage containers retain their 1000px maximum. Project content containers now have a 750px maximum for shorter text lines. Contact uses content-sized columns distributed across the homepage width, with its final text aligned to the right edge on desktop; existing tablet/phone column changes remain. Stylesheet version 69.
+
+Safari passed 28 expanded checks across seven pages at 320, 390, 768 and 1440px: homepage and project content widths match the requested caps and responsive margins, Contact fills its container and desktop rightmost text aligns, with no horizontal overflow. Whitespace checks passed. Temporary fixture and preview server removed; user edits retained and changes remain local.

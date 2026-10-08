@@ -1,6 +1,23 @@
 "use strict";
 document.documentElement.classList.add("js");
 
+// Inclusive calendar months, with ongoing periods refreshed on each visit.
+const durationToday = new Date();
+for (const label of document.querySelectorAll("[data-duration-start]")) {
+  const [year, month] = label.dataset.durationStart.split("-").map(Number);
+  const ongoingMonths = Math.max(0, (durationToday.getFullYear() - year) * 12
+    + durationToday.getMonth() + 1 - month + 1);
+  const total = ongoingMonths + Number(label.dataset.durationCompletedMonths || 0);
+  if (total < 1) continue;
+  const years = Math.floor(total / 12);
+  const months = total % 12;
+  label.textContent = (label.dataset.durationPrefix ?? "· ") + [
+    years ? `${years} ${years === 1 ? "yr" : "yrs"}` : "",
+    months ? `${months} ${months === 1 ? "mo" : "mos"}` : ""
+  ].filter(Boolean).join(" ")
+    + (label.dataset.durationCompletedMonths ? " total" : "");
+}
+
 const menuButton = document.querySelector(".menu-button");
 const navigation = document.getElementById("site-nav");
 function setMenu(open) {

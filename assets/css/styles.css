@@ -271,14 +271,14 @@ a {
 }
 
 .container {
-  width: min(1120px, calc(100% - 64px));
+  width: min(1000px, calc(100% - 64px));
   margin-inline: auto;
 }
 
 
 .section-intro {
   color: var(--fg-2);
-  max-width: 390px;
+  max-width: none;
 }
 
 .document-links {
@@ -325,7 +325,7 @@ a {
 #site-nav {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 22px;
   font: var(--text-body) var(--sans);
   letter-spacing: normal;
   text-transform: none;
@@ -581,7 +581,7 @@ a {
 }
 
 .cv-list {
-  max-width: 1040px;
+  max-width: none;
   margin-top: 32px;
 }
 
@@ -688,7 +688,7 @@ details[open] > summary .chevron {
   color: var(--fg);
 }
 
-.cv-phase h4 span,
+.cv-phase h4 > span,
 .cv-caption {
   display: block;
   font-weight: 400;
@@ -932,16 +932,14 @@ html:not(.js) .cv-close {
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  column-gap: 64px;
+  grid-template-columns: repeat(3, max-content);
+  justify-content: space-between;
+  column-gap: 24px;
+  row-gap: 44px;
   width: 100%;
 }
 
 .skills-grid--primary {
-  margin-top: 44px;
-}
-
-.skills-grid--secondary {
   margin-top: 44px;
 }
 
@@ -1010,7 +1008,8 @@ html:not(.js) .cv-close {
 
 .contact-details {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(4, max-content);
+  justify-content: space-between;
   gap: 24px;
   margin: 0;
 }
@@ -1056,7 +1055,7 @@ html:not(.js) .cv-close {
 
 /* PROJECT DETAIL PAGES — Explicit variants; prose stays on a shared reading grid. */
 .project-container {
-  max-width: 1040px;
+  max-width: 750px;
 }
 
 .project-hero {
@@ -1067,7 +1066,7 @@ html:not(.js) .cv-close {
   font-size: var(--text-title);
   letter-spacing: -0.02em;
   line-height: 1.15;
-  max-width: 24ch;
+  max-width: none;
   overflow-wrap: anywhere;
 }
 
@@ -1079,7 +1078,7 @@ html:not(.js) .cv-close {
 
 .project-facts {
   display: block;
-  max-width: 820px;
+  max-width: none;
   margin: 28px 0 0;
   padding: 0;
 }
@@ -1142,7 +1141,7 @@ html:not(.js) .cv-close {
 }
 
 .project-overview > .case-video {
-  max-width: 720px;
+  max-width: none;
 }
 
 .project-body {
@@ -1267,7 +1266,7 @@ html:not(.js) .cv-close {
 }
 
 .case-video {
-  max-width: 880px;
+  max-width: none;
 }
 
 .case-video--portrait {
@@ -1431,7 +1430,7 @@ html:not(.js) .cv-close {
 }
 
 .case-workflow {
-  max-width: 880px;
+  max-width: none;
   padding-block: 16px;
   border-block: 1px solid var(--line);
 }
@@ -1760,7 +1759,7 @@ html:not(.js) .cv-close {
   font-size: var(--text-title);
   letter-spacing: -0.02em;
   line-height: 1.1;
-  max-width: 800px;
+  max-width: none;
   margin-bottom: 44px;
 }
 
@@ -2215,7 +2214,7 @@ html:not(.js) .cv-close {
 /* A single typographic hierarchy for supporting project headings and controls. */
 .technical-notes > summary, .ik-equations > summary { font-size: var(--text-body); font-weight: 500; }
 .ik-equations .ik-equation-panels h4 { font-size: var(--text-body); font-family: var(--sans); }
-@media (min-width: 801px) and (max-width: 1100px) { #site-nav { gap: 12px; } #site-nav .nav-social { padding-inline: 8px; } }
+@media (min-width: 801px) and (max-width: 1100px) { #site-nav { gap: 14px; } #site-nav .nav-social { padding-inline: 8px; } }
 
 /* Hero actions: secondary links above the primary link. */
 .hero .actions { display: grid; grid-template-columns: minmax(0, 1fr) auto; width: max-content; max-width: 100%; gap: 12px; }
@@ -2223,9 +2222,19 @@ html:not(.js) .cv-close {
 .hero .actions .button { letter-spacing: normal; text-transform: none; padding-inline: 14px; justify-content: center; }
 
 /* Align the About me facts with the photo and personal note. */
-.about-aside > .facts { width: 100%; max-width: 460px; margin-inline: 0; }
+.about-aside > .facts { width: 100%; max-width: none; margin-inline: 0; }
 
 /* Keep the Furhat company link beside its introduction in either state. */
 .cv-company-link {
   margin-top: 0;
+}
+
+.date-duration {
+  white-space: nowrap;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.cv-date > .date-duration {
+  display: block;
 }
