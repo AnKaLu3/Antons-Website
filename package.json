@@ -1,0 +1,15 @@
+{
+  "name": "akrobotics-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Anton Kühr's robotics and mechanical engineering portfolio",
+  "scripts": {
+    "check": "python3 scripts/check_site.py",
+    "check:js": "node --check assets/js/site.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "3.9.9"
+  }
+}
