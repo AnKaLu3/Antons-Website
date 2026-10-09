@@ -1969,6 +1969,11 @@ html:not(.js) .cv-close {
     grid-column: 1;
     grid-row: 2;
   }
+  /* Body copy uses the 44px toggle column and its 12px gap; titles stay inset. */
+  :is(#education, #jobs, #volunteering) .cv-context,
+  :is(#education, #jobs, #volunteering) .cv-company-link {
+    margin-right: -56px;
+  }
   .cv-toggle {
     grid-column: 2;
     grid-row: 2;
